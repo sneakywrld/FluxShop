@@ -3,7 +3,7 @@
 # Shows all items in that category, paginated.
 
 # {category} = category display name
-title: "<gold><bold>{category}</bold></gold>"
+title: "&6&l{category}"
 
 rows: 6
 
@@ -53,9 +53,9 @@ navigation:
   previous-page:
     slot: 45
     material: ARROW
-    name: "<aqua><bold>◀ Previous Page"
+    name: "&b&l◀ Previous Page"
     lore:
-      - "<gray>Page {page} of {total}"
+      - "&7Page {page} of {total}"
     action: PREV_PAGE
     # Hide this button if on the first page
     hide-on-first-page: true
@@ -63,17 +63,17 @@ navigation:
   page-indicator:
     slot: 49
     material: PAPER
-    name: "<white>Page <yellow>{page}<white>/<yellow>{total}"
+    name: "&fPage &e{page}&f/&e{total}"
     lore:
-      - "<gray>{items} items in this category"
+      - "&7{items} items in this category"
     action: NONE
 
   next-page:
     slot: 53
     material: ARROW
-    name: "<aqua><bold>Next Page ▶"
+    name: "&b&lNext Page ▶"
     lore:
-      - "<gray>Page {page} of {total}"
+      - "&7Page {page} of {total}"
     action: NEXT_PAGE
     hide-on-last-page: true
 
@@ -81,17 +81,17 @@ navigation:
     slot: 47
     material: PLAYER_HEAD
     skull-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODY0Zjc3OWE5ZTNmODg2NGEyMWFmYWI4NjMwMzY1MGMyMGI2ODRjYmQ1NDI3NjY0YzRlYTE0Njg2NDMifX19"
-    name: "<gray>◁ Back"
+    name: "&7◁ Back"
     lore:
-      - "<gray>Return to the main menu."
+      - "&7Return to the main menu."
     action: BACK
 
   search:
     slot: 51
     material: COMPASS
-    name: "<yellow>⚲ Search"
+    name: "&e⚲ Search"
     lore:
-      - "<gray>Type in chat to filter items."
+      - "&7Type in chat to filter items."
     action: SEARCH
 
 # How item lore is built for each shop item displayed here.

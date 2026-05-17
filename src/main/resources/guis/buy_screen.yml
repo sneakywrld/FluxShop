@@ -3,7 +3,7 @@
 # Lets them choose a quantity before confirming the purchase.
 
 # {item} = item display name
-title: "<green><bold>Buy {item}"
+title: "&a&lBuy {item}"
 
 rows: 4
 
@@ -23,82 +23,82 @@ preview-slot: 13
 price-display:
   slot: 11
   material: SUNFLOWER
-  name: "<gold><bold>Price Info"
+  name: "&6&lPrice Info"
   lore:
-    - "<gray>Buy price: <green>{buy-price} {currency}</green>"
-    - "<gray>Quantity:   <white>x{amount}</white>"
-    - "<gray>Total:      <gold>{total} {currency}</gold>"
+    - "&7Buy price: &a{buy-price} {currency}"
+    - "&7Quantity:   &fx{amount}"
+    - "&7Total:      &6{total} {currency}"
     - ""
-    - "<gray>Balance: <green>{balance} {currency}</green>"
-    - "<gray>Remaining: <green>{remaining} {currency}</green>"
+    - "&7Balance: &a{balance} {currency}"
+    - "&7Remaining: &a{remaining} {currency}"
 
 # Quantity buttons (fixed slots)
 quantities:
   - slot: 18
     amount: 1
     material: WHITE_STAINED_GLASS_PANE
-    name: "<white>x1"
+    name: "&fx1"
 
   - slot: 19
     amount: 8
     material: LIGHT_BLUE_STAINED_GLASS_PANE
-    name: "<aqua>x8"
+    name: "&bx8"
 
   - slot: 20
     amount: 16
     material: CYAN_STAINED_GLASS_PANE
-    name: "<aqua>x16"
+    name: "&bx16"
 
   - slot: 21
     amount: 32
     material: BLUE_STAINED_GLASS_PANE
-    name: "<blue>x32"
+    name: "&9x32"
 
   - slot: 22
     amount: 64
     material: PURPLE_STAINED_GLASS_PANE
-    name: "<dark_purple>x64"
+    name: "&5x64"
 
   # Max affordable: calculated dynamically
   - slot: 23
     amount: MAX
     material: LIME_STAINED_GLASS_PANE
-    name: "<green>Max (<white>{max}</white>)"
+    name: "&aMax (&f{max}&a)"
     lore:
-      - "<gray>Buy as many as you can afford."
+      - "&7Buy as many as you can afford."
 
   # Custom amount: opens anvil/chat input
   - slot: 24
     amount: CUSTOM
     material: WRITABLE_BOOK
-    name: "<yellow>Custom Amount"
+    name: "&eCustom Amount"
     lore:
-      - "<gray>Click to enter a custom amount."
+      - "&7Click to enter a custom amount."
 
 # Confirm button
 confirm:
   slot: 15
   material: LIME_CONCRETE
-  name: "<green><bold>✔ Confirm Purchase"
+  name: "&a&l✔ Confirm Purchase"
   lore:
-    - "<gray>Click to buy <white>x{amount} {item}</white>"
-    - "<gray>for <gold>{total} {currency}</gold>."
+    - "&7Click to buy &fx{amount} {item}"
+    - "&7for &6{total} {currency}&7."
 
 # Cancel button
 cancel:
   slot: 17
   material: RED_CONCRETE
-  name: "<red><bold>✘ Cancel"
+  name: "&c&l✘ Cancel"
   lore:
-    - "<gray>Go back without buying."
+    - "&7Go back without buying."
 
 # Back button
 back:
   slot: 31
   material: ARROW
-  name: "<gray>◁ Back"
+  name: "&7◁ Back"
   lore:
-    - "<gray>Return to the shop."
+    - "&7Return to the shop."
   action: BACK
 
 # Selected quantity glows

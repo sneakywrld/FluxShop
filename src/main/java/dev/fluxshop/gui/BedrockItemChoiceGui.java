@@ -45,7 +45,7 @@ public class BedrockItemChoiceGui extends FluxGui {
             : item.getDisplayItem().getType().name().charAt(0)
                 + item.getDisplayItem().getType().name().substring(1).toLowerCase().replace('_', ' ');
 
-        String title = plugin.getMessageManager().format("<gray>» <white>" + itemName, player);
+        String title = plugin.getMessageManager().format("&7» &f" + itemName, player);
 
         GuiBuilder builder = new GuiBuilder(3, title)
             .border(Material.BLACK_STAINED_GLASS_PANE, " ")
@@ -62,16 +62,16 @@ public class BedrockItemChoiceGui extends FluxGui {
                 ? eco.format(priceCalc.getBuyPrice(item, player, 1)) + " " + eco.getCurrencyName()
                 : String.format("$%.2f", priceCalc.getBuyPrice(item, player, 1));
             builder.set(SLOT_BUY, new ItemBuilder(Material.LIME_CONCRETE)
-                .name(plugin.getMessageManager().format("<green><bold>✔ Buy", player))
+                .name(plugin.getMessageManager().format("&a&l✔ Buy", player))
                 .lore(
-                    plugin.getMessageManager().format("<gray>Price: <green>" + buyPrice, player),
+                    plugin.getMessageManager().format("&7Price: &a" + buyPrice, player),
                     "",
-                    plugin.getMessageManager().format("<yellow>Tap to buy", player)
+                    plugin.getMessageManager().format("&eTap to buy", player)
                 )
                 .build());
         } else {
             builder.set(SLOT_BUY, new ItemBuilder(Material.GRAY_CONCRETE)
-                .name(plugin.getMessageManager().format("<gray>Buy: <red>Not available", player))
+                .name(plugin.getMessageManager().format("&7Buy: &cNot available", player))
                 .build());
         }
 
@@ -83,23 +83,23 @@ public class BedrockItemChoiceGui extends FluxGui {
                 ? eco.format(priceCalc.getSellPrice(item, player, 1)) + " " + eco.getCurrencyName()
                 : String.format("$%.2f", priceCalc.getSellPrice(item, player, 1));
             builder.set(SLOT_SELL, new ItemBuilder(Material.GOLD_BLOCK)
-                .name(plugin.getMessageManager().format("<gold><bold>$ Sell", player))
+                .name(plugin.getMessageManager().format("&6&l$ Sell", player))
                 .lore(
-                    plugin.getMessageManager().format("<gray>Price: <gold>" + sellPrice, player),
+                    plugin.getMessageManager().format("&7Price: &6" + sellPrice, player),
                     "",
-                    plugin.getMessageManager().format("<yellow>Tap to sell", player)
+                    plugin.getMessageManager().format("&eTap to sell", player)
                 )
                 .build());
         } else {
             builder.set(SLOT_SELL, new ItemBuilder(Material.GRAY_CONCRETE)
-                .name(plugin.getMessageManager().format("<gray>Sell: <red>Not available", player))
+                .name(plugin.getMessageManager().format("&7Sell: &cNot available", player))
                 .build());
         }
 
         // Back button
         builder.set(SLOT_BACK, new ItemBuilder(Material.ARROW)
-            .name(plugin.getMessageManager().format("<gray>◁ Back", player))
-            .lore(plugin.getMessageManager().format("<gray>Return to the category.", player))
+            .name(plugin.getMessageManager().format("&7◁ Back", player))
+            .lore(plugin.getMessageManager().format("&7Return to the category.", player))
             .build());
 
         inventory = builder.build(new ShopHolder(shop, category));

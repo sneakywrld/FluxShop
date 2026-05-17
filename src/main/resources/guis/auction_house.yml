@@ -2,7 +2,7 @@
 
 # Main browse screen
 browse:
-  title: "<dark_aqua><bold>⚒ Auction House"
+  title: "&3&l⚒ Auction House"
   rows: 6
 
   border:
@@ -41,103 +41,103 @@ browse:
   # Listing lore template
   listing-lore:
     - ""
-    - "<gray>Seller: <white>{seller}</white>"
-    - "<gray>Current bid: <gold>{bid} {currency}</gold>"
-    - "<gray>Buy now:  <green>{buy-now} {currency}</green>"
-    - "<gray>Expires: <white>{expires}</white>"
+    - "&7Seller: &f{seller}"
+    - "&7Current bid: &6{bid} {currency}"
+    - "&7Buy now:  &a{buy-now} {currency}"
+    - "&7Expires: &f{expires}"
     - ""
-    - "<aqua>Left-click to bid"
-    - "<green>Right-click to buy now"
+    - "&bLeft-click to bid"
+    - "&aRight-click to buy now"
 
   navigation:
     previous-page:
       slot: 45
       material: ARROW
-      name: "<aqua>◀ Previous"
-      lore: [ "<gray>Page {page} of {total}" ]
+      name: "&b◀ Previous"
+      lore: [ "&7Page {page} of {total}" ]
       action: PREV_PAGE
 
     page-info:
       slot: 49
       material: PAPER
-      name: "<white>Page <yellow>{page}<white>/<yellow>{total}"
-      lore: [ "<gray>{listings} active listings" ]
+      name: "&fPage &e{page}&f/&e{total}"
+      lore: [ "&7{listings} active listings" ]
 
     next-page:
       slot: 53
       material: ARROW
-      name: "<aqua>Next ▶"
-      lore: [ "<gray>Page {page} of {total}" ]
+      name: "&bNext ▶"
+      lore: [ "&7Page {page} of {total}" ]
       action: NEXT_PAGE
 
     back:
       slot: 47
       material: BARRIER
-      name: "<gray>◁ Back"
+      name: "&7◁ Back"
       action: BACK
 
     my-listings:
       slot: 46
       material: CHEST
-      name: "<yellow>My Listings"
+      name: "&eMy Listings"
       lore:
-        - "<gray>View your active listings."
-        - "<gray>Active: <white>{my-count}</white>"
+        - "&7View your active listings."
+        - "&7Active: &f{my-count}"
       action: MY_LISTINGS
 
     collect:
       slot: 48
       material: GOLD_INGOT
-      name: "<gold>Collect"
+      name: "&6Collect"
       lore:
-        - "<gray>Collect sold items or refunds."
-        - "<gray>Pending: <white>{pending}</white>"
+        - "&7Collect sold items or refunds."
+        - "&7Pending: &f{pending}"
       action: COLLECT
 
     list-item:
       slot: 50
       material: LIME_CONCRETE
-      name: "<green>List Item"
+      name: "&aList Item"
       lore:
-        - "<gray>Hold an item and click to list it."
+        - "&7Hold an item and click to list it."
       action: LIST_ITEM
 
     search:
       slot: 52
       material: COMPASS
-      name: "<yellow>Search"
+      name: "&eSearch"
       lore:
-        - "<gray>Filter listings by name."
+        - "&7Filter listings by name."
       action: SEARCH
 
     filter:
       slot: 51
       material: HOPPER
-      name: "<white>Filter"
+      name: "&fFilter"
       lore:
-        - "<gray>Sort by: <white>{sort}</white>"
+        - "&7Sort by: &f{sort}"
         - ""
-        - "<gray>Click to cycle sort mode."
+        - "&7Click to cycle sort mode."
       action: FILTER
 
 # Bid screen
 bid:
-  title: "<dark_aqua><bold>Place a Bid"
+  title: "&3&lPlace a Bid"
   rows: 4
 
   preview-slot: 13
   info-slot: 11
   info-material: BOOK
-  info-name: "<gold>Auction Details"
+  info-name: "&6Auction Details"
   info-lore:
-    - "<gray>Item: <white>{item}</white>"
-    - "<gray>Seller: <white>{seller}</white>"
-    - "<gray>Current bid: <gold>{bid} {currency}</gold>"
-    - "<gray>Buy now: <green>{buy-now} {currency}</green>"
-    - "<gray>Expires: <white>{expires}</white>"
+    - "&7Item: &f{item}"
+    - "&7Seller: &f{seller}"
+    - "&7Current bid: &6{bid} {currency}"
+    - "&7Buy now: &a{buy-now} {currency}"
+    - "&7Expires: &f{expires}"
     - ""
-    - "<gray>Min next bid: <gold>{min-bid} {currency}</gold>"
-    - "<gray>Your balance: <green>{balance} {currency}</green>"
+    - "&7Min next bid: &6{min-bid} {currency}"
+    - "&7Your balance: &a{balance} {currency}"
 
   bid-amounts:
     - slot: 19
@@ -156,32 +156,32 @@ bid:
       label: "Custom"
       amount: CUSTOM
       material: WRITABLE_BOOK
-      name: "<yellow>Custom Bid"
-      lore: [ "<gray>Click to type a custom amount." ]
+      name: "&eCustom Bid"
+      lore: [ "&7Click to type a custom amount." ]
 
   confirm:
     slot: 15
     material: LIME_CONCRETE
-    name: "<green><bold>✔ Place Bid"
+    name: "&a&l✔ Place Bid"
     lore:
-      - "<gray>Bid <gold>{bid} {currency}</gold> on <white>{item}</white>"
+      - "&7Bid &6{bid} {currency}&7 on &f{item}"
 
   buy-now:
     slot: 16
     material: GOLD_BLOCK
-    name: "<gold><bold>⚡ Buy Now"
+    name: "&6&l⚡ Buy Now"
     lore:
-      - "<gray>Instantly buy for <green>{buy-now} {currency}</green>"
+      - "&7Instantly buy for &a{buy-now} {currency}"
 
   cancel:
     slot: 17
     material: RED_CONCRETE
-    name: "<red>Cancel"
+    name: "&cCancel"
     action: BACK
 
 # List-item screen
 list:
-  title: "<dark_aqua><bold>List on Auction House"
+  title: "&3&lList on Auction House"
   rows: 4
 
   preview-slot: 13
@@ -189,44 +189,44 @@ list:
   start-price:
     slot: 11
     material: GOLD_INGOT
-    name: "<gold>Starting Price"
+    name: "&6Starting Price"
     lore:
-      - "<gray>Current: <gold>{price} {currency}</gold>"
-      - "<gray>Click to set."
+      - "&7Current: &6{price} {currency}"
+      - "&7Click to set."
     action: SET_PRICE
 
   buy-now-price:
     slot: 12
     material: EMERALD
-    name: "<green>Buy Now Price"
+    name: "&aBuy Now Price"
     lore:
-      - "<gray>Current: <green>{buy-now} {currency}</green>"
-      - "<gray>Set to 0 to disable."
+      - "&7Current: &a{buy-now} {currency}"
+      - "&7Set to 0 to disable."
     action: SET_BUY_NOW
 
   duration:
     slot: 14
     material: CLOCK
-    name: "<white>Duration"
+    name: "&fDuration"
     lore:
-      - "<gray>Current: <white>{duration}h</white>"
-      - "<gray>Click to cycle options."
+      - "&7Current: &f{duration}h"
+      - "&7Click to cycle options."
     action: CYCLE_DURATION
 
   confirm:
     slot: 16
     material: LIME_CONCRETE
-    name: "<green><bold>✔ List Item"
+    name: "&a&l✔ List Item"
     lore:
-      - "<gray>List <white>{item}</white>"
-      - "<gray>Starting at <gold>{price} {currency}</gold>"
-      - "<gray>Buy now: <green>{buy-now} {currency}</green>"
-      - "<gray>Duration: <white>{duration}h</white>"
+      - "&7List &f{item}"
+      - "&7Starting at &6{price} {currency}"
+      - "&7Buy now: &a{buy-now} {currency}"
+      - "&7Duration: &f{duration}h"
       - ""
-      - "<gray>Fee: <gold>{fee} {currency}</gold>"
+      - "&7Fee: &6{fee} {currency}"
 
   cancel:
     slot: 10
     material: RED_CONCRETE
-    name: "<red>Cancel"
+    name: "&cCancel"
     action: BACK

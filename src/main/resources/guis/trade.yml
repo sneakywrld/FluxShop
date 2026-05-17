@@ -2,7 +2,7 @@
 # Split-pane trade window. Player A on left, Player B on right.
 # Both must confirm before the trade executes.
 
-title: "<aqua><bold>{playerA} <gray>⟺ <aqua>{playerB}"
+title: "&b&l{playerA} &7⟺ &b{playerB}"
 
 rows: 6
 
@@ -23,39 +23,39 @@ player-a-label:
   slot: 1
   material: PLAYER_HEAD
   skull-player: "{playerA}"
-  name: "<aqua><bold>{playerA}"
+  name: "&b&l{playerA}"
   lore:
-    - "<gray>Offering {item-count} item(s)"
-    - "<gray>+ <gold>{currency-amount} {currency}</gold>"
+    - "&7Offering {item-count} item(s)"
+    - "&7+ &6{currency-amount} {currency}"
 
 # Player B label
 player-b-label:
   slot: 7
   material: PLAYER_HEAD
   skull-player: "{playerB}"
-  name: "<aqua><bold>{playerB}"
+  name: "&b&l{playerB}"
   lore:
-    - "<gray>Offering {item-count} item(s)"
-    - "<gray>+ <gold>{currency-amount} {currency}</gold>"
+    - "&7Offering {item-count} item(s)"
+    - "&7+ &6{currency-amount} {currency}"
 
 # Currency input display (below item slots)
 # Click to open chat input for currency amount
 currency-a:
   slot: 37
   material: SUNFLOWER
-  name: "<gold>Currency Offer ({playerA})"
+  name: "&6Currency Offer ({playerA})"
   lore:
-    - "<gray>Offering: <gold>{amount} {currency}</gold>"
-    - "<gray>Click to change."
+    - "&7Offering: &6{amount} {currency}"
+    - "&7Click to change."
   action: SET_CURRENCY_A
 
 currency-b:
   slot: 43
   material: SUNFLOWER
-  name: "<gold>Currency Offer ({playerB})"
+  name: "&6Currency Offer ({playerB})"
   lore:
-    - "<gray>Offering: <gold>{amount} {currency}</gold>"
-    - "<gray>Click to change."
+    - "&7Offering: &6{amount} {currency}"
+    - "&7Click to change."
   action: SET_CURRENCY_B
 
 # Confirm / not-ready buttons
@@ -65,35 +65,35 @@ confirm-a:
   # Changes based on state
   ready:
     material: LIME_CONCRETE
-    name: "<green><bold>✔ Ready!"
-    lore: [ "<gray>Waiting for {playerB}..." ]
+    name: "&a&l✔ Ready!"
+    lore: [ "&7Waiting for {playerB}..." ]
   not-ready:
     material: YELLOW_CONCRETE
-    name: "<yellow>Confirm Trade"
+    name: "&eConfirm Trade"
     lore:
-      - "<gray>Click when you're ready."
-      - "<gray>Both players must confirm."
+      - "&7Click when you're ready."
+      - "&7Both players must confirm."
 
 confirm-b:
   slot: 44
   ready:
     material: LIME_CONCRETE
-    name: "<green><bold>✔ Ready!"
-    lore: [ "<gray>Waiting for {playerA}..." ]
+    name: "&a&l✔ Ready!"
+    lore: [ "&7Waiting for {playerA}..." ]
   not-ready:
     material: YELLOW_CONCRETE
-    name: "<yellow>Confirm Trade"
+    name: "&eConfirm Trade"
     lore:
-      - "<gray>Click when you're ready."
-      - "<gray>Both players must confirm."
+      - "&7Click when you're ready."
+      - "&7Both players must confirm."
 
 # Cancel button (middle bottom)
 cancel:
   slot: 40
   material: RED_CONCRETE
-  name: "<red><bold>✘ Cancel Trade"
+  name: "&c&l✘ Cancel Trade"
   lore:
-    - "<gray>Cancel and return all items."
+    - "&7Cancel and return all items."
   action: CANCEL
 
 # Status indicator (slot 49)
@@ -101,14 +101,14 @@ status:
   slot: 49
   waiting:
     material: CLOCK
-    name: "<yellow>Waiting..."
+    name: "&eWaiting..."
     lore:
-      - "<gray>A: {status-a}"
-      - "<gray>B: {status-b}"
+      - "&7A: {status-a}"
+      - "&7B: {status-b}"
   both-ready:
     material: LIME_CONCRETE
-    name: "<green>Both players ready!"
-    lore: [ "<gray>Trade will complete shortly." ]
+    name: "&aBoth players ready!"
+    lore: [ "&7Trade will complete shortly." ]
 
 # Border (rows 4–5 bottom area)
 border:

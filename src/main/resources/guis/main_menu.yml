@@ -1,11 +1,11 @@
 # ── Main Shop Menu GUI ────────────────────────────────────────────────────────
 # First screen players see on /shop — shows all shop categories as icons.
 
-title: "<gold><bold>✦ Server Shop ✦</bold></gold>"
+title: "&6&l✦ Server Shop ✦"
 
 # When drilling into a single shop's categories this title is used instead
 # (the shop's display name is substituted dynamically in code).
-category-title: "<gray>« <gold><bold>{shop}</bold></gold> <gray>»"
+category-title: "&7« &6&l{shop} &7»"
 
 # Inventory size (rows × 9)
 rows: 6
@@ -34,17 +34,17 @@ decorations:
   close:
     slot: 49
     material: BARRIER
-    name: "<red><bold>✕ Close"
+    name: "&c&l✕ Close"
     lore:
-      - "<gray>Click to close the shop."
+      - "&7Click to close the shop."
 
   # Back button — only shown in the single-shop category-picker view
   back:
     slot: 45
     material: ARROW
-    name: "<gray><bold>← Back"
+    name: "&7&l← Back"
     lore:
-      - "<gray>Return to all shops."
+      - "&7Return to all shops."
 
 # ── Slot layouts ──────────────────────────────────────────────────────────────
 # all-shops-slots: where the 12 shop icons are placed (3 × 4 centred grid)

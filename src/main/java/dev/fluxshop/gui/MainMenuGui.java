@@ -91,9 +91,9 @@ public class MainMenuGui extends FluxGui {
         boolean bedrock = plugin.getCompatManager().isBedrockPlayer(player);
 
         String rawTitle = allShops != null
-            ? cfg.getString("title", "<gold><bold>✦ Server Shop ✦</bold></gold>")
-            : cfg.getString("category-title",
-                "<gold><bold>" + shop.getDisplayName() + "</bold></gold>");
+            ? cfg.getString("title", "&6&l✦ Server Shop ✦")
+            : cfg.getString("category-title", "&7« &6&l{shop} &7»")
+                .replace("{shop}", shop.getDisplayName());
 
         String title = plugin.getMessageManager().format(rawTitle, player);
 
@@ -134,7 +134,7 @@ public class MainMenuGui extends FluxGui {
         // Close button
         activeCloseSlot = bedrock ? 40 : cfg.getInt("decorations.close.slot", 49);
         Material closeMat  = safeMaterial(cfg.getString("decorations.close.material"), Material.BARRIER);
-        String   closeName = cfg.getString("decorations.close.name", "<red><bold>✕ Close");
+        String   closeName = cfg.getString("decorations.close.name", "&c&l✕ Close");
         List<String> closeLore = cfg.getStringList("decorations.close.lore");
         ItemBuilder closeBtn = new ItemBuilder(closeMat)
             .name(plugin.getMessageManager().format(closeName, player))
@@ -152,7 +152,7 @@ public class MainMenuGui extends FluxGui {
             int backSlot = cfg.getInt("decorations.back.slot", 45);
             String backMatStr = cfg.getString("decorations.back.material");
             Material backMat  = safeMaterial(backMatStr, Material.ARROW);
-            String   backName = cfg.getString("decorations.back.name", "<gray>← Back");
+            String   backName = cfg.getString("decorations.back.name", "&7← Back");
             builder.set(backSlot, new ItemBuilder(backMat)
                 .name(plugin.getMessageManager().format(backName, player))
                 .hideAll()
@@ -310,21 +310,21 @@ public class MainMenuGui extends FluxGui {
         long totalSellable= cats.stream().flatMap(c -> c.getItems().stream()).filter(ShopItem::isSellable).count();
 
         String name = plugin.getMessageManager().format(
-            "<gold><bold>" + shop.getDisplayName() + "</bold></gold>", player);
+            "&6&l" + shop.getDisplayName(), player);
 
         List<String> lore = new ArrayList<>();
-        lore.add(plugin.getMessageManager().format("<dark_gray>─────────────────────", player));
+        lore.add(plugin.getMessageManager().format("&8─────────────────────", player));
         if (cats.size() > 1) {
             lore.add(plugin.getMessageManager().format(
-                "<gray>" + cats.size() + " categories  •  " + totalItems + " items", player));
+                "&7" + cats.size() + " categories  •  " + totalItems + " items", player));
         } else {
             lore.add(plugin.getMessageManager().format(
-                "<gray>" + totalItems + " items available", player));
+                "&7" + totalItems + " items available", player));
         }
         lore.add(plugin.getMessageManager().format(
-            "<green>▲ Buy: " + totalBuyable + "  <gold>▼ Sell: " + totalSellable, player));
+            "&a▲ Buy: " + totalBuyable + "  &6▼ Sell: " + totalSellable, player));
         lore.add("");
-        lore.add(plugin.getMessageManager().format("<yellow>▶ Click to browse", player));
+        lore.add(plugin.getMessageManager().format("&e▶ Click to browse", player));
 
         return new ItemBuilder(base).name(name).lore(lore).hideAll().build();
     }
@@ -332,29 +332,29 @@ public class MainMenuGui extends FluxGui {
     private ItemStack buildCategoryIcon(ShopCategory cat, Player player) {
         ItemStack base = cat.getIcon() != null ? cat.getIcon() : new ItemStack(Material.CHEST);
         String name = plugin.getMessageManager().format(
-            "<gold><bold>" + cat.getDisplayName() + "</bold></gold>", player);
+            "&6&l" + cat.getDisplayName(), player);
 
         long buyCount  = cat.getItems().stream().filter(ShopItem::isBuyable).count();
         long sellCount = cat.getItems().stream().filter(ShopItem::isSellable).count();
 
         List<String> lore = new ArrayList<>();
-        lore.add(plugin.getMessageManager().format("<dark_gray>─────────────────────", player));
+        lore.add(plugin.getMessageManager().format("&8─────────────────────", player));
         lore.add(plugin.getMessageManager().format(
-            "<gray>" + cat.getItems().size() + " items available", player));
+            "&7" + cat.getItems().size() + " items available", player));
         lore.add(plugin.getMessageManager().format(
-            "<green>▲ Buy: " + buyCount + "  <gold>▼ Sell: " + sellCount, player));
+            "&a▲ Buy: " + buyCount + "  &6▼ Sell: " + sellCount, player));
         lore.add("");
-        lore.add(plugin.getMessageManager().format("<yellow>▶ Click to browse", player));
+        lore.add(plugin.getMessageManager().format("&e▶ Click to browse", player));
 
         return new ItemBuilder(base).name(name).lore(lore).hideAll().build();
     }
 
     private ItemStack buildLockedIcon(ShopCategory cat, Player player) {
         return new ItemBuilder(Material.BARRIER)
-            .name(plugin.getMessageManager().format("<red><bold>✕ " + cat.getDisplayName(), player))
+            .name(plugin.getMessageManager().format("&c&l✕ " + cat.getDisplayName(), player))
             .lore(
-                plugin.getMessageManager().format("<gray>You don't have permission", player),
-                plugin.getMessageManager().format("<gray>to access this category.", player)
+                plugin.getMessageManager().format("&7You don't have permission", player),
+                plugin.getMessageManager().format("&7to access this category.", player)
             )
             .hideAll()
             .build();

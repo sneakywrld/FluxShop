@@ -95,7 +95,7 @@ public class CategoryGui extends FluxGui {
         pageItems.addAll(all.subList(start, end));
 
         // Title
-        String titleTemplate = cfg.getString("title", "<gold><bold>{category}</bold></gold>");
+        String titleTemplate = cfg.getString("title", "&6&l{category}");
         String title = plugin.getMessageManager().format(
             titleTemplate.replace("{category}", category.getDisplayName()), player);
 
@@ -121,7 +121,7 @@ public class CategoryGui extends FluxGui {
         if (clampedPage > 0) {
             Material prevMat  = safeMaterial(cfg.getString("navigation.previous-page.material"), Material.ARROW);
             String   prevName = formatNav(cfg.getString("navigation.previous-page.name",
-                "<aqua><bold>◀ Previous Page"), clampedPage, totalPages, all.size());
+                "&b&l◀ Previous Page"), clampedPage, totalPages, all.size());
             List<String> prevLore = formatNavLore(cfg.getStringList("navigation.previous-page.lore"),
                 clampedPage, totalPages, all.size());
             ItemBuilder btn = new ItemBuilder(prevMat).name(plugin.getMessageManager().format(prevName, player));
@@ -133,7 +133,7 @@ public class CategoryGui extends FluxGui {
         int pageIndicatorSlot = bedrock ? 40 : cfg.getInt("navigation.page-indicator.slot", 49);
         Material pageMat  = safeMaterial(cfg.getString("navigation.page-indicator.material"), Material.PAPER);
         String   pageName = formatNav(cfg.getString("navigation.page-indicator.name",
-            "<white>Page <yellow>{page}<white>/<yellow>{total}"), clampedPage, totalPages, all.size());
+            "&fPage &e{page}&f/&e{total}"), clampedPage, totalPages, all.size());
         List<String> pageLore = formatNavLore(cfg.getStringList("navigation.page-indicator.lore"),
             clampedPage, totalPages, all.size());
         ItemBuilder pageBtn = new ItemBuilder(pageMat).name(plugin.getMessageManager().format(pageName, player));
@@ -145,7 +145,7 @@ public class CategoryGui extends FluxGui {
         if (clampedPage < totalPages - 1) {
             Material nextMat  = safeMaterial(cfg.getString("navigation.next-page.material"), Material.ARROW);
             String   nextName = formatNav(cfg.getString("navigation.next-page.name",
-                "<aqua><bold>Next Page ▶"), clampedPage + 1, totalPages, all.size());
+                "&b&lNext Page ▶"), clampedPage + 1, totalPages, all.size());
             List<String> nextLore = formatNavLore(cfg.getStringList("navigation.next-page.lore"),
                 clampedPage + 1, totalPages, all.size());
             ItemBuilder btn = new ItemBuilder(nextMat).name(plugin.getMessageManager().format(nextName, player));
@@ -155,7 +155,7 @@ public class CategoryGui extends FluxGui {
 
         // Back button (with optional skull texture)
         backSlot = bedrock ? 38 : cfg.getInt("navigation.back.slot", 47);
-        String backName    = cfg.getString("navigation.back.name", "<gray>◁ Back");
+        String backName    = cfg.getString("navigation.back.name", "&7◁ Back");
         String backTexture = cfg.getString("navigation.back.skull-texture", "");
         Material backMat   = safeMaterial(cfg.getString("navigation.back.material"), Material.ARROW);
         ItemBuilder backBtn;
@@ -175,7 +175,7 @@ public class CategoryGui extends FluxGui {
         int searchSlot = bedrock ? -1 : cfg.getInt("navigation.search.slot", -1);
         if (searchSlot >= 0) {
             Material searchMat  = safeMaterial(cfg.getString("navigation.search.material"), Material.COMPASS);
-            String   searchName = cfg.getString("navigation.search.name", "<yellow>⚲ Search");
+            String   searchName = cfg.getString("navigation.search.name", "&e⚲ Search");
             builder.set(searchSlot, new ItemBuilder(searchMat)
                 .name(plugin.getMessageManager().format(searchName, player))
                 .build());
@@ -270,9 +270,9 @@ public class CategoryGui extends FluxGui {
             String buyFormatted = eco != null
                 ? eco.format(buyPrice) + " " + eco.getCurrencyName()
                 : String.format("$%.2f", buyPrice);
-            lore.add(plugin.getMessageManager().format("<gray>Buy: <green>" + buyFormatted, player));
+            lore.add(plugin.getMessageManager().format("&7Buy: &a" + buyFormatted, player));
         } else {
-            lore.add(plugin.getMessageManager().format("<gray>Buy: <red>Not available", player));
+            lore.add(plugin.getMessageManager().format("&7Buy: &cNot available", player));
         }
 
         // Sell price line
@@ -281,15 +281,15 @@ public class CategoryGui extends FluxGui {
             String sellFormatted = eco != null
                 ? eco.format(sellPrice) + " " + eco.getCurrencyName()
                 : String.format("$%.2f", sellPrice);
-            lore.add(plugin.getMessageManager().format("<gray>Sell: <gold>" + sellFormatted, player));
+            lore.add(plugin.getMessageManager().format("&7Sell: &6" + sellFormatted, player));
         } else {
-            lore.add(plugin.getMessageManager().format("<gray>Sell: <red>Not available", player));
+            lore.add(plugin.getMessageManager().format("&7Sell: &cNot available", player));
         }
 
         lore.add("");
-        if (canBuy)  lore.add(plugin.getMessageManager().format("<yellow>Left-click: <white>Buy", player));
-        if (canSell) lore.add(plugin.getMessageManager().format("<yellow>Right-click: <white>Sell", player));
-        if (canBuy)  lore.add(plugin.getMessageManager().format("<yellow>Shift+click: <white>Buy max", player));
+        if (canBuy)  lore.add(plugin.getMessageManager().format("&eLeft-click: &fBuy", player));
+        if (canSell) lore.add(plugin.getMessageManager().format("&eRight-click: &fSell", player));
+        if (canBuy)  lore.add(plugin.getMessageManager().format("&eShift+click: &fBuy max", player));
 
         ItemBuilder builder = new ItemBuilder(item.getDisplayItem())
             .lore(lore)

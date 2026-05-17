@@ -116,14 +116,13 @@ public class MessageManager {
 
     /**
      * Applies full formatting pipeline to a raw string:
-     * gradient → hex → MiniMessage tags → legacy colour codes → placeholder replacement.
+     * gradient → hex → legacy colour codes → placeholder replacement.
      */
     public String format(String raw, Player player, Object... vars) {
         if (raw == null) return "";
         String s = raw;
         s = applyGradients(s);
         s = applyHexColors(s);
-        s = applyMiniMessageTags(s);
         s = applyVars(s, vars);
         s = colorize(s);
         if (papiAvailable && player != null) {

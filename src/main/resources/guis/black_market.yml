@@ -2,7 +2,7 @@
 # A mysterious rotating shop with rare/limited items.
 # The "dark" aesthetic sets it apart from the main shop.
 
-title: "<dark_purple><bold>☠ Black Market ☠"
+title: "&5&l☠ Black Market ☠"
 
 rows: 6
 
@@ -10,7 +10,7 @@ border:
   enabled: true
   # Skull head border for extra atmosphere
   material: WITHER_SKELETON_SKULL
-  name: "<dark_gray>☠"
+  name: "&8☠"
   # Alternate with black glass to avoid lag on slower servers
   alternate-material: BLACK_STAINED_GLASS_PANE
 
@@ -54,28 +54,28 @@ item-slots:
 # Listing lore template
 listing-lore:
   - ""
-  - "<dark_gray>Price: <gold>{price} {currency}</gold>"
-  - "<dark_gray>Stock: <white>{stock} remaining</white>"
-  - "<dark_gray>Your purchases: <white>{bought}/{max}</white>"
+  - "&8Price: &6{price} {currency}"
+  - "&8Stock: &f{stock} remaining"
+  - "&8Your purchases: &f{bought}/{max}"
   - ""
-  - "<dark_purple>Resets in: <white>{countdown}</white>"
+  - "&5Resets in: &f{countdown}"
   - ""
-  - "<gray>Left-click to purchase"
+  - "&7Left-click to purchase"
 
 # Countdown timer display (slot 4 — top center)
 countdown:
   slot: 4
   material: CLOCK
-  name: "<dark_purple>Next Rotation"
+  name: "&5Next Rotation"
   lore:
-    - "<gray>Resets in: <white>{countdown}</white>"
-    - "<gray>Items change each rotation."
+    - "&7Resets in: &f{countdown}"
+    - "&7Items change each rotation."
 
 # Close button
 close:
   slot: 49
   material: BARRIER
-  name: "<red>Leave the Black Market"
+  name: "&cLeave the Black Market"
   action: CLOSE
 
 # Decoration items
