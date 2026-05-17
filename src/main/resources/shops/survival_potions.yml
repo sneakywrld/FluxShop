@@ -1,7 +1,7 @@
 id: survival_potions
 display-name: "&5⚗ Potions"
 enabled: true
-display-slot: 14
+display-slot: 20
 display-item:
   material: POTION
   name: "&5⚗ &fPotions"

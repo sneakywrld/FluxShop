@@ -1,7 +1,7 @@
 id: survival_mob_drops
 display-name: "&cMob Drops"
 enabled: true
-display-slot: 15
+display-slot: 21
 display-item:
   material: BONE
   name: "&c☠ &fMob Drops"

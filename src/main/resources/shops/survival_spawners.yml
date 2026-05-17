@@ -1,7 +1,7 @@
 id: survival_spawners
 display-name: "&6Spawners"
 enabled: true
-display-slot: 22
+display-slot: 30
 display-item:
   material: SPAWNER
   name: "&6⚙ &fSpawners"

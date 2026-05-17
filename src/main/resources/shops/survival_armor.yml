@@ -1,7 +1,7 @@
 id: survival_armor
 display-name: "&b🛡 Armor"
 enabled: true
-display-slot: 13
+display-slot: 14
 display-item:
   material: IRON_CHESTPLATE
   name: "&b🛡 &fArmor"

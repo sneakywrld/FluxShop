@@ -11,76 +11,118 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * The main shop menu — shows all available category icons.
- * Layout, border, background, and button config are all driven by guis/main_menu.yml.
+ * The main shop menu.
+ *
+ * <p>Two modes:
+ * <ul>
+ *   <li><b>All-shops view</b> — constructed with a list of all shops; shows every shop
+ *       as a clickable icon. Clicking a shop with one category jumps directly into it;
+ *       clicking a multi-category shop opens a category picker.</li>
+ *   <li><b>Category picker</b> — constructed with a single shop; shows that shop's
+ *       categories as icons. Clicking a category opens {@link CategoryGui}.</li>
+ * </ul>
+ *
+ * Layout, border, background, and button config are all driven by {@code guis/main_menu.yml}.
  */
 public class MainMenuGui extends FluxGui {
 
     private final FluxShopPlugin plugin;
-    private final Shop           shop;
 
-    // Static fallback slots (used if layout.available-slots is missing from config)
-    private static final int[] DEFAULT_SLOTS = {
-        10,11,12,13,14,15,16,
-        19,20,21,22,23,24,25,
-        28,29,30,31,32,33,34,
-        37,38,39,40,41,42,43
+    /** Non-null in all-shops view; null in category-picker view. */
+    private final List<Shop> allShops;
+    /** Non-null in category-picker view; null in all-shops view. */
+    private final Shop shop;
+
+    // Slots resolved from config on every open() call, used by handleClick().
+    private int[] activeSlots;
+    private int   activeCloseSlot = 49;
+    private int   activeBackSlot  = -1; // only shown in category-picker view
+
+    // ── Default slot grids ─────────────────────────────────────────────────────
+
+    /** 3 × 4 centered grid — fits up to 12 shops comfortably. */
+    private static final int[] DEFAULT_ALL_SHOPS_SLOTS = {
+        11, 12, 13, 14,
+        20, 21, 22, 23,
+        29, 30, 31, 32
     };
 
-    /** Populated from config on every open() call, used by handleClick(). */
-    private int[] activeSlots = DEFAULT_SLOTS;
-    /** Close button slot — kept in sync with what was rendered so handleClick() matches. */
-    private int activeCloseSlot = 49;
+    /** 4 × 7 grid — fits up to 28 categories per shop. */
+    private static final int[] DEFAULT_CATEGORY_SLOTS = {
+        10, 11, 12, 13, 14, 15, 16,
+        19, 20, 21, 22, 23, 24, 25,
+        28, 29, 30, 31, 32, 33, 34,
+        37, 38, 39, 40, 41, 42, 43
+    };
 
-    public MainMenuGui(FluxShopPlugin plugin, Shop shop) {
-        this.plugin = plugin;
-        this.shop   = shop;
+    private static final int[] BEDROCK_SLOTS = {
+        10, 11, 12, 13, 14, 15, 16,
+        19, 20, 21, 22, 23, 24, 25,
+        28, 29, 30, 31, 32, 33, 34
+    };
+
+    // ── Constructors ──────────────────────────────────────────────────────────
+
+    /** All-shops view — shows every shop as a clickable icon. */
+    public MainMenuGui(FluxShopPlugin plugin, List<Shop> allShops) {
+        this.plugin   = plugin;
+        this.allShops = new ArrayList<>(allShops);
+        this.shop     = null;
     }
 
-    // Bedrock (GeyserMC): 5-row version uses rows 1–3 for categories
-    private static final int[] BEDROCK_SLOTS = {
-        10,11,12,13,14,15,16,
-        19,20,21,22,23,24,25,
-        28,29,30,31,32,33,34
-    };
+    /** Category-picker view — shows one shop's categories. */
+    public MainMenuGui(FluxShopPlugin plugin, Shop shop) {
+        this.plugin   = plugin;
+        this.shop     = shop;
+        this.allShops = null;
+    }
+
+    // ── Open ──────────────────────────────────────────────────────────────────
 
     @Override
     public void open(Player player) {
         FileConfiguration cfg = plugin.getConfigManager().getGuiConfig("main_menu");
-
-        String title = plugin.getMessageManager().format(
-            cfg.getString("title", "<bold><gradient:#FFD700:#FFA500>✦ FluxShop ✦</gradient></bold>"),
-            player
-        );
-
         boolean bedrock = plugin.getCompatManager().isBedrockPlayer(player);
 
-        // Bedrock players get a 5-row GUI; Java players use config value (default 6)
-        int      rows      = bedrock ? 5 : cfg.getInt("rows", 6);
-        Material borderMat = safeMaterial(cfg.getString("border.material"),     Material.BLACK_STAINED_GLASS_PANE);
-        Material bgMat     = safeMaterial(cfg.getString("background.material"), Material.GRAY_STAINED_GLASS_PANE);
+        String rawTitle = allShops != null
+            ? cfg.getString("title", "<gold><bold>✦ Server Shop ✦</bold></gold>")
+            : cfg.getString("category-title",
+                "<gold><bold>" + shop.getDisplayName() + "</bold></gold>");
 
-        // Refresh available slots from config (Bedrock always uses the 5-row layout)
+        String title = plugin.getMessageManager().format(rawTitle, player);
+
+        int      rows      = bedrock ? 5 : cfg.getInt("rows", 6);
+        Material borderMat = safeMaterial(cfg.getString("border.material"), Material.GRAY_STAINED_GLASS_PANE);
+        Material bgMat     = safeMaterial(cfg.getString("background.material"), Material.LIGHT_GRAY_STAINED_GLASS_PANE);
+
+        // Resolve active slots
         if (bedrock) {
             activeSlots = BEDROCK_SLOTS;
+        } else if (allShops != null) {
+            List<Integer> cfgSlots = cfg.getIntegerList("layout.all-shops-slots");
+            activeSlots = cfgSlots.isEmpty()
+                ? DEFAULT_ALL_SHOPS_SLOTS
+                : cfgSlots.stream().mapToInt(Integer::intValue).toArray();
         } else {
-            List<Integer> configSlots = cfg.getIntegerList("layout.available-slots");
-            if (!configSlots.isEmpty()) {
-                activeSlots = configSlots.stream().mapToInt(i -> i).toArray();
-            }
+            List<Integer> cfgSlots = cfg.getIntegerList("layout.available-slots");
+            activeSlots = cfgSlots.isEmpty()
+                ? DEFAULT_CATEGORY_SLOTS
+                : cfgSlots.stream().mapToInt(Integer::intValue).toArray();
         }
 
         GuiBuilder builder = new GuiBuilder(rows, title)
             .border(borderMat, " ")
             .fill(bgMat, " ");
 
-        // Bottom divider row — row 4 on Bedrock (slots 36-44), row 5 on Java (from config)
-        String   divMaterialStr = cfg.getString("decorations.divider.material");
-        Material divMat         = safeMaterial(divMaterialStr, borderMat);
+        // Divider bar above bottom row
+        String   divMatStr = cfg.getString("decorations.divider.material");
+        Material divMat    = safeMaterial(divMatStr, borderMat);
         if (bedrock) {
             for (int s = 36; s <= 44; s++) builder.set(s, ItemBuilder.pane(divMat, " "));
         } else {
@@ -89,10 +131,10 @@ public class MainMenuGui extends FluxGui {
             }
         }
 
-        // Close button — slot 40 on Bedrock (row 4 centre), config slot on Java
-        activeCloseSlot     = bedrock ? 40 : cfg.getInt("decorations.close.slot", 49);
-        Material closeMat   = safeMaterial(cfg.getString("decorations.close.material"), Material.BARRIER);
-        String   closeName  = cfg.getString("decorations.close.name", "<red><bold>✕ Close");
+        // Close button
+        activeCloseSlot = bedrock ? 40 : cfg.getInt("decorations.close.slot", 49);
+        Material closeMat  = safeMaterial(cfg.getString("decorations.close.material"), Material.BARRIER);
+        String   closeName = cfg.getString("decorations.close.name", "<red><bold>✕ Close");
         List<String> closeLore = cfg.getStringList("decorations.close.lore");
         ItemBuilder closeBtn = new ItemBuilder(closeMat)
             .name(plugin.getMessageManager().format(closeName, player))
@@ -104,82 +146,217 @@ public class MainMenuGui extends FluxGui {
         }
         builder.set(activeCloseSlot, closeBtn.build());
 
-        // Place category icons
-        List<ShopCategory> categories = shop.getCategories();
-        for (int i = 0; i < categories.size() && i < activeSlots.length; i++) {
-            ShopCategory cat = categories.get(i);
-            if (!cat.isEnabled() || cat.isHidden()) continue;
-            int slot = cat.getIconSlot() >= 0 ? cat.getIconSlot() : activeSlots[i];
-            if (cat.getPermission() != null && !player.hasPermission(cat.getPermission())) {
-                builder.set(slot, buildLockedIcon(cat));
-                continue;
-            }
-            builder.set(slot, buildCategoryIcon(cat, player));
+        // Back button (category-picker view only)
+        activeBackSlot = -1;
+        if (allShops == null && !bedrock) {
+            int backSlot = cfg.getInt("decorations.back.slot", 45);
+            String backMatStr = cfg.getString("decorations.back.material");
+            Material backMat  = safeMaterial(backMatStr, Material.ARROW);
+            String   backName = cfg.getString("decorations.back.name", "<gray>← Back");
+            builder.set(backSlot, new ItemBuilder(backMat)
+                .name(plugin.getMessageManager().format(backName, player))
+                .hideAll()
+                .build());
+            activeBackSlot = backSlot;
         }
 
-        inventory = builder.build(new ShopHolder(shop, null));
+        // Place icons
+        if (allShops != null) {
+            placeShopIcons(builder, player);
+        } else {
+            placeCategoryIcons(builder, player);
+        }
+
+        inventory = builder.build(new ShopHolder(allShops != null ? null : shop, null));
         player.openInventory(inventory);
         plugin.getSoundManager().play(player, "shop-open");
     }
+
+    // ── Click handling ────────────────────────────────────────────────────────
 
     @Override
     public void handleClick(InventoryClickEvent event) {
         event.setCancelled(true);
         if (!(event.getWhoClicked() instanceof Player player)) return;
-
         int slot = event.getRawSlot();
 
-        // Close button
         if (slot == activeCloseSlot) {
             player.closeInventory();
             return;
         }
 
-        // Category click
-        List<ShopCategory> categories = shop.getCategories();
-        for (int i = 0; i < categories.size() && i < activeSlots.length; i++) {
-            ShopCategory cat    = categories.get(i);
-            int          catSlot = cat.getIconSlot() >= 0 ? cat.getIconSlot() : activeSlots[i];
-            if (slot == catSlot && cat.isEnabled() && !cat.isHidden()) {
-                if (cat.getPermission() != null && !player.hasPermission(cat.getPermission())) {
-                    plugin.getMessageManager().send(player, "shop.no-access");
-                    plugin.getSoundManager().play(player, "purchase-fail");
-                    return;
-                }
-                plugin.getGuiManager().open(player, new CategoryGui(plugin, shop, cat, 0));
-                return;
-            }
+        if (slot == activeBackSlot && activeBackSlot != -1) {
+            // Go back to all-shops view
+            List<Shop> all = new ArrayList<>(plugin.getShopManager().getAllShops());
+            plugin.getGuiManager().open(player, new MainMenuGui(plugin, all));
+            return;
+        }
+
+        if (allShops != null) {
+            handleShopClick(player, slot);
+        } else {
+            handleCategoryClick(player, slot);
         }
     }
 
     // ── Private helpers ───────────────────────────────────────────────────────
 
-    private ItemStack buildCategoryIcon(ShopCategory cat, Player player) {
-        ItemBuilder builder = new ItemBuilder(cat.getIcon() != null ? cat.getIcon() : new ItemStack(Material.CHEST));
+    private void placeShopIcons(GuiBuilder builder, Player player) {
+        List<Shop> sorted = allShops.stream()
+            .filter(s -> s.isEnabled())
+            .sorted(Comparator.comparingInt(s -> s.getDisplaySlot() >= 0 ? s.getDisplaySlot() : Integer.MAX_VALUE))
+            .collect(Collectors.toList());
+
+        int autoIdx = 0;
+        for (Shop s : sorted) {
+            if (autoIdx >= activeSlots.length) break;
+            int slot = (s.getDisplaySlot() >= 0 && s.getDisplaySlot() < inventory.getSize())
+                ? s.getDisplaySlot()
+                : activeSlots[autoIdx];
+            autoIdx++;
+            builder.set(slot, buildShopIcon(s, player));
+        }
+    }
+
+    private void placeCategoryIcons(GuiBuilder builder, Player player) {
+        List<ShopCategory> categories = shop.getCategories();
+        int autoIdx = 0;
+        for (ShopCategory cat : categories) {
+            if (!cat.isEnabled() || cat.isHidden()) continue;
+            if (autoIdx >= activeSlots.length) break;
+            int slot = cat.getIconSlot() >= 0 ? cat.getIconSlot() : activeSlots[autoIdx];
+            autoIdx++;
+            if (cat.getPermission() != null && !player.hasPermission(cat.getPermission())) {
+                builder.set(slot, buildLockedIcon(cat, player));
+            } else {
+                builder.set(slot, buildCategoryIcon(cat, player));
+            }
+        }
+    }
+
+    private void handleShopClick(Player player, int slot) {
+        List<Shop> sorted = allShops.stream()
+            .filter(Shop::isEnabled)
+            .sorted(Comparator.comparingInt(s -> s.getDisplaySlot() >= 0 ? s.getDisplaySlot() : Integer.MAX_VALUE))
+            .collect(Collectors.toList());
+
+        int autoIdx = 0;
+        for (Shop s : sorted) {
+            if (autoIdx >= activeSlots.length) break;
+            int shopSlot = (s.getDisplaySlot() >= 0 && s.getDisplaySlot() < inventory.getSize())
+                ? s.getDisplaySlot()
+                : activeSlots[autoIdx];
+            autoIdx++;
+            if (slot != shopSlot) continue;
+
+            // Permission check on shop
+            if (s.getPermission() != null && !player.hasPermission(s.getPermission())) {
+                plugin.getMessageManager().send(player, "shop.no-access");
+                plugin.getSoundManager().play(player, "purchase-fail");
+                return;
+            }
+
+            List<ShopCategory> cats = s.getCategories().stream()
+                .filter(c -> c.isEnabled() && !c.isHidden())
+                .collect(Collectors.toList());
+
+            if (cats.size() == 1) {
+                // Skip category picker — go straight to the items
+                ShopCategory cat = cats.get(0);
+                if (cat.getPermission() != null && !player.hasPermission(cat.getPermission())) {
+                    plugin.getMessageManager().send(player, "shop.no-access");
+                    plugin.getSoundManager().play(player, "purchase-fail");
+                    return;
+                }
+                plugin.getGuiManager().open(player, new CategoryGui(plugin, s, cat, 0));
+            } else {
+                plugin.getGuiManager().open(player, new MainMenuGui(plugin, s));
+            }
+            return;
+        }
+    }
+
+    private void handleCategoryClick(Player player, int slot) {
+        List<ShopCategory> categories = shop.getCategories();
+        int autoIdx = 0;
+        for (ShopCategory cat : categories) {
+            if (!cat.isEnabled() || cat.isHidden()) continue;
+            if (autoIdx >= activeSlots.length) break;
+            int catSlot = cat.getIconSlot() >= 0 ? cat.getIconSlot() : activeSlots[autoIdx];
+            autoIdx++;
+            if (slot != catSlot) continue;
+
+            if (cat.getPermission() != null && !player.hasPermission(cat.getPermission())) {
+                plugin.getMessageManager().send(player, "shop.no-access");
+                plugin.getSoundManager().play(player, "purchase-fail");
+                return;
+            }
+            plugin.getGuiManager().open(player, new CategoryGui(plugin, shop, cat, 0));
+            return;
+        }
+    }
+
+    // ── Icon builders ─────────────────────────────────────────────────────────
+
+    private ItemStack buildShopIcon(Shop shop, Player player) {
+        ItemStack base = shop.getDisplayItem() != null
+            ? shop.getDisplayItem().clone()
+            : new ItemStack(Material.CHEST);
+
+        // Count items across all categories
+        List<ShopCategory> cats = shop.getCategories();
+        int totalItems    = cats.stream().mapToInt(c -> c.getItems().size()).sum();
+        long totalBuyable = cats.stream().flatMap(c -> c.getItems().stream()).filter(ShopItem::isBuyable).count();
+        long totalSellable= cats.stream().flatMap(c -> c.getItems().stream()).filter(ShopItem::isSellable).count();
+
         String name = plugin.getMessageManager().format(
-            "<gradient:#FFD700:#FFA500><bold>" + cat.getDisplayName() + "</bold></gradient>", player);
-        builder.name(name);
+            "<gold><bold>" + shop.getDisplayName() + "</bold></gold>", player);
+
+        List<String> lore = new ArrayList<>();
+        lore.add(plugin.getMessageManager().format("<dark_gray>─────────────────────", player));
+        if (cats.size() > 1) {
+            lore.add(plugin.getMessageManager().format(
+                "<gray>" + cats.size() + " categories  •  " + totalItems + " items", player));
+        } else {
+            lore.add(plugin.getMessageManager().format(
+                "<gray>" + totalItems + " items available", player));
+        }
+        lore.add(plugin.getMessageManager().format(
+            "<green>▲ Buy: " + totalBuyable + "  <gold>▼ Sell: " + totalSellable, player));
+        lore.add("");
+        lore.add(plugin.getMessageManager().format("<yellow>▶ Click to browse", player));
+
+        return new ItemBuilder(base).name(name).lore(lore).hideAll().build();
+    }
+
+    private ItemStack buildCategoryIcon(ShopCategory cat, Player player) {
+        ItemStack base = cat.getIcon() != null ? cat.getIcon() : new ItemStack(Material.CHEST);
+        String name = plugin.getMessageManager().format(
+            "<gold><bold>" + cat.getDisplayName() + "</bold></gold>", player);
 
         long buyCount  = cat.getItems().stream().filter(ShopItem::isBuyable).count();
         long sellCount = cat.getItems().stream().filter(ShopItem::isSellable).count();
-        builder.lore(List.of(
-            plugin.getMessageManager().format("<dark_gray>━━━━━━━━━━━━━━━━━━━━━━", player),
-            plugin.getMessageManager().format("<gray>" + cat.getItems().size() + " items available", player),
-            plugin.getMessageManager().format("<dark_gray>Buy: <green>" + buyCount
-                + " <dark_gray>• Sell: <gold>" + sellCount, player),
-            "",
-            plugin.getMessageManager().format("<yellow>▶ Left-click to browse", player)
-        ));
-        return builder.build();
+
+        List<String> lore = new ArrayList<>();
+        lore.add(plugin.getMessageManager().format("<dark_gray>─────────────────────", player));
+        lore.add(plugin.getMessageManager().format(
+            "<gray>" + cat.getItems().size() + " items available", player));
+        lore.add(plugin.getMessageManager().format(
+            "<green>▲ Buy: " + buyCount + "  <gold>▼ Sell: " + sellCount, player));
+        lore.add("");
+        lore.add(plugin.getMessageManager().format("<yellow>▶ Click to browse", player));
+
+        return new ItemBuilder(base).name(name).lore(lore).hideAll().build();
     }
 
-    private ItemStack buildLockedIcon(ShopCategory cat) {
+    private ItemStack buildLockedIcon(ShopCategory cat, Player player) {
         return new ItemBuilder(Material.BARRIER)
-            .name(plugin.getMessageManager().format("<red><bold>✕ " + cat.getDisplayName()))
+            .name(plugin.getMessageManager().format("<red><bold>✕ " + cat.getDisplayName(), player))
             .lore(
-                plugin.getMessageManager().format("<gray>You don't have permission"),
-                plugin.getMessageManager().format("<gray>to access this category.")
+                plugin.getMessageManager().format("<gray>You don't have permission", player),
+                plugin.getMessageManager().format("<gray>to access this category.", player)
             )
+            .hideAll()
             .build();
     }
 

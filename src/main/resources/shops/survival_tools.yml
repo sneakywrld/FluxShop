@@ -1,7 +1,7 @@
 id: survival_tools
 display-name: "&6⛏ Tools"
 enabled: true
-display-slot: 12
+display-slot: 13
 display-item:
   material: IRON_PICKAXE
   name: "&6⛏ &fTools"

@@ -1,7 +1,7 @@
 id: survival_nether
 display-name: "&cNether"
 enabled: true
-display-slot: 23
+display-slot: 31
 display-item:
   material: NETHERRACK
   name: "&c🔥 &fNether"

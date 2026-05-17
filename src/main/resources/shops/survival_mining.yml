@@ -1,7 +1,7 @@
 id: survival_mining
 display-name: "&7Mining"
 enabled: true
-display-slot: 21
+display-slot: 29
 display-item:
   material: TNT
   name: "&7⛏ &fMining"

@@ -1,7 +1,7 @@
 id: survival_farming
 display-name: "&aFarming"
 enabled: true
-display-slot: 20
+display-slot: 23
 display-item:
   material: WHEAT
   name: "&a🌾 &fFarming"

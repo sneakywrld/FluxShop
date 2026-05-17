@@ -1,9 +1,9 @@
 id: survival_food
 display-name: "&a🍖 Food"
 enabled: true
-display-slot: 11
+display-slot: 12
 display-item:
-  material: BREAD
+  material: COOKED_BEEF
   name: "&a🍖 &fFood"
   lore:
     - "&8Crops, cooked foods, and more"

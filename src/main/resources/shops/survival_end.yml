@@ -1,7 +1,7 @@
 id: survival_end
 display-name: "&5The End"
 enabled: true
-display-slot: 24
+display-slot: 32
 display-item:
   material: END_STONE
   name: "&5☆ &fThe End"

@@ -1,9 +1,9 @@
 id: survival_enchanting
 display-name: "&dEnchanting"
 enabled: true
-display-slot: 19
+display-slot: 22
 display-item:
-  material: ENCHANTING_TABLE
+  material: ENCHANTED_BOOK
   name: "&d✨ &fEnchanting"
   lore:
     - "&8Books, lapis, and enchanted books"

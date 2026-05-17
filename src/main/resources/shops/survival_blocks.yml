@@ -1,12 +1,12 @@
 id: survival_blocks
 display-name: "&7⛏ Blocks"
 enabled: true
-display-slot: 10
+display-slot: 11
 display-item:
-  material: STONE
-  name: "&7⛏ &fBlocks"
+  material: STONE_BRICKS
+  name: "&f⛏ Building Blocks"
   lore:
-    - "&8Stone, wood, glass, concrete and more"
+    - "&8Stone, logs, glass, concrete and ores"
 
 categories:
   stone:
