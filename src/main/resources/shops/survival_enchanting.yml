@@ -1,0 +1,344 @@
+id: survival_enchanting
+display-name: "&dEnchanting"
+enabled: true
+display-slot: 19
+display-item:
+  material: ENCHANTING_TABLE
+  name: "&d✨ &fEnchanting"
+  lore:
+    - "&8Books, lapis, and enchanted books"
+
+categories:
+  materials:
+    display-name: "&bEnchanting Materials"
+    enabled: true
+    icon:
+      material: LAPIS_LAZULI
+      name: "&bEnchanting Materials"
+    items:
+      lapis_lazuli:
+        material: LAPIS_LAZULI
+        buy-price: 20
+        sell-price: 10
+        slot: 0
+      book:
+        material: BOOK
+        buy-price: 10
+        sell-price: 4
+        slot: 1
+      bookshelf:
+        material: BOOKSHELF
+        buy-price: 30
+        sell-price: 12
+        slot: 2
+      enchanting_table:
+        material: ENCHANTING_TABLE
+        buy-price: 500
+        sell-price: 200
+        slot: 3
+      anvil:
+        material: ANVIL
+        buy-price: 200
+        sell-price: 80
+        slot: 4
+      grindstone:
+        material: GRINDSTONE
+        buy-price: 60
+        sell-price: 25
+        slot: 5
+      experience_bottle:
+        material: EXPERIENCE_BOTTLE
+        buy-price: 5
+        sell-price: 2
+        slot: 6
+
+  protection_books:
+    display-name: "&aProtection Books"
+    enabled: true
+    icon:
+      material: ENCHANTED_BOOK
+      name: "&aProtection Books"
+    items:
+      protection_4:
+        material: ENCHANTED_BOOK
+        book-enchant: protection
+        book-enchant-level: 4
+        buy-price: 800
+        sell-price: 350
+        slot: 0
+      blast_protection_4:
+        material: ENCHANTED_BOOK
+        book-enchant: blast_protection
+        book-enchant-level: 4
+        buy-price: 500
+        sell-price: 200
+        slot: 1
+      fire_protection_4:
+        material: ENCHANTED_BOOK
+        book-enchant: fire_protection
+        book-enchant-level: 4
+        buy-price: 500
+        sell-price: 200
+        slot: 2
+      projectile_protection_4:
+        material: ENCHANTED_BOOK
+        book-enchant: projectile_protection
+        book-enchant-level: 4
+        buy-price: 400
+        sell-price: 160
+        slot: 3
+      feather_falling_4:
+        material: ENCHANTED_BOOK
+        book-enchant: feather_falling
+        book-enchant-level: 4
+        buy-price: 600
+        sell-price: 250
+        slot: 4
+      respiration_3:
+        material: ENCHANTED_BOOK
+        book-enchant: respiration
+        book-enchant-level: 3
+        buy-price: 400
+        sell-price: 160
+        slot: 5
+      aqua_affinity:
+        material: ENCHANTED_BOOK
+        book-enchant: aqua_affinity
+        book-enchant-level: 1
+        buy-price: 300
+        sell-price: 120
+        slot: 6
+      thorns_3:
+        material: ENCHANTED_BOOK
+        book-enchant: thorns
+        book-enchant-level: 3
+        buy-price: 600
+        sell-price: 250
+        slot: 7
+      depth_strider_3:
+        material: ENCHANTED_BOOK
+        book-enchant: depth_strider
+        book-enchant-level: 3
+        buy-price: 600
+        sell-price: 250
+        slot: 8
+      frost_walker_2:
+        material: ENCHANTED_BOOK
+        book-enchant: frost_walker
+        book-enchant-level: 2
+        buy-price: 400
+        sell-price: 160
+        slot: 9
+      soul_speed_3:
+        material: ENCHANTED_BOOK
+        book-enchant: soul_speed
+        book-enchant-level: 3
+        buy-price: 500
+        sell-price: 200
+        slot: 10
+      swift_sneak_3:
+        material: ENCHANTED_BOOK
+        book-enchant: swift_sneak
+        book-enchant-level: 3
+        buy-price: 700
+        sell-price: 300
+        slot: 11
+
+  weapon_books:
+    display-name: "&cWeapon Books"
+    enabled: true
+    icon:
+      material: ENCHANTED_BOOK
+      name: "&cWeapon Books"
+    items:
+      sharpness_5:
+        material: ENCHANTED_BOOK
+        book-enchant: sharpness
+        book-enchant-level: 5
+        buy-price: 1000
+        sell-price: 450
+        slot: 0
+      smite_5:
+        material: ENCHANTED_BOOK
+        book-enchant: smite
+        book-enchant-level: 5
+        buy-price: 600
+        sell-price: 250
+        slot: 1
+      bane_of_arthropods_5:
+        material: ENCHANTED_BOOK
+        book-enchant: bane_of_arthropods
+        book-enchant-level: 5
+        buy-price: 600
+        sell-price: 250
+        slot: 2
+      knockback_2:
+        material: ENCHANTED_BOOK
+        book-enchant: knockback
+        book-enchant-level: 2
+        buy-price: 300
+        sell-price: 120
+        slot: 3
+      fire_aspect_2:
+        material: ENCHANTED_BOOK
+        book-enchant: fire_aspect
+        book-enchant-level: 2
+        buy-price: 500
+        sell-price: 200
+        slot: 4
+      looting_3:
+        material: ENCHANTED_BOOK
+        book-enchant: looting
+        book-enchant-level: 3
+        buy-price: 700
+        sell-price: 300
+        slot: 5
+      sweeping_edge_3:
+        material: ENCHANTED_BOOK
+        book-enchant: sweeping_edge
+        book-enchant-level: 3
+        buy-price: 500
+        sell-price: 200
+        slot: 6
+
+  tool_books:
+    display-name: "&6Tool Books"
+    enabled: true
+    icon:
+      material: ENCHANTED_BOOK
+      name: "&6Tool Books"
+    items:
+      efficiency_5:
+        material: ENCHANTED_BOOK
+        book-enchant: efficiency
+        book-enchant-level: 5
+        buy-price: 1000
+        sell-price: 450
+        slot: 0
+      silk_touch:
+        material: ENCHANTED_BOOK
+        book-enchant: silk_touch
+        book-enchant-level: 1
+        buy-price: 1200
+        sell-price: 500
+        slot: 1
+      fortune_3:
+        material: ENCHANTED_BOOK
+        book-enchant: fortune
+        book-enchant-level: 3
+        buy-price: 1500
+        sell-price: 650
+        slot: 2
+      unbreaking_3:
+        material: ENCHANTED_BOOK
+        book-enchant: unbreaking
+        book-enchant-level: 3
+        buy-price: 600
+        sell-price: 250
+        slot: 3
+      mending:
+        material: ENCHANTED_BOOK
+        book-enchant: mending
+        book-enchant-level: 1
+        buy-price: 2000
+        sell-price: 900
+        slot: 4
+
+  bow_books:
+    display-name: "&eBow & Special Books"
+    enabled: true
+    icon:
+      material: ENCHANTED_BOOK
+      name: "&eBow & Special Books"
+    items:
+      power_5:
+        material: ENCHANTED_BOOK
+        book-enchant: power
+        book-enchant-level: 5
+        buy-price: 800
+        sell-price: 350
+        slot: 0
+      punch_2:
+        material: ENCHANTED_BOOK
+        book-enchant: punch
+        book-enchant-level: 2
+        buy-price: 400
+        sell-price: 160
+        slot: 1
+      flame:
+        material: ENCHANTED_BOOK
+        book-enchant: flame
+        book-enchant-level: 1
+        buy-price: 500
+        sell-price: 200
+        slot: 2
+      infinity:
+        material: ENCHANTED_BOOK
+        book-enchant: infinity
+        book-enchant-level: 1
+        buy-price: 1000
+        sell-price: 450
+        slot: 3
+      multishot:
+        material: ENCHANTED_BOOK
+        book-enchant: multishot
+        book-enchant-level: 1
+        buy-price: 600
+        sell-price: 250
+        slot: 4
+      piercing_4:
+        material: ENCHANTED_BOOK
+        book-enchant: piercing
+        book-enchant-level: 4
+        buy-price: 500
+        sell-price: 200
+        slot: 5
+      quick_charge_3:
+        material: ENCHANTED_BOOK
+        book-enchant: quick_charge
+        book-enchant-level: 3
+        buy-price: 400
+        sell-price: 160
+        slot: 6
+      curse_of_binding:
+        material: ENCHANTED_BOOK
+        book-enchant: binding_curse
+        book-enchant-level: 1
+        buy-price: 50
+        sell-price: 20
+        slot: 9
+      curse_of_vanishing:
+        material: ENCHANTED_BOOK
+        book-enchant: vanishing_curse
+        book-enchant-level: 1
+        buy-price: 50
+        sell-price: 20
+        slot: 10
+      channeling:
+        material: ENCHANTED_BOOK
+        book-enchant: channeling
+        book-enchant-level: 1
+        buy-price: 600
+        sell-price: 250
+        slot: 11
+      impaling_5:
+        material: ENCHANTED_BOOK
+        book-enchant: impaling
+        book-enchant-level: 5
+        buy-price: 700
+        sell-price: 300
+        slot: 12
+      loyalty_3:
+        material: ENCHANTED_BOOK
+        book-enchant: loyalty
+        book-enchant-level: 3
+        buy-price: 500
+        sell-price: 200
+        slot: 13
+      riptide_3:
+        material: ENCHANTED_BOOK
+        book-enchant: riptide
+        book-enchant-level: 3
+        buy-price: 700
+        sell-price: 300
+        slot: 14

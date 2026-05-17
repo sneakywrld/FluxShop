@@ -1,0 +1,298 @@
+id: survival_tools
+display-name: "&6⛏ Tools"
+enabled: true
+display-slot: 12
+display-item:
+  material: IRON_PICKAXE
+  name: "&6⛏ &fTools"
+  lore:
+    - "&8Pickaxes, axes, shovels and more"
+
+categories:
+  pickaxes:
+    display-name: "&7Pickaxes"
+    enabled: true
+    icon:
+      material: IRON_PICKAXE
+      name: "&7Pickaxes"
+    items:
+      wooden_pickaxe:
+        material: WOODEN_PICKAXE
+        buy-price: 10
+        sell-price: 3
+        slot: 0
+      stone_pickaxe:
+        material: STONE_PICKAXE
+        buy-price: 20
+        sell-price: 8
+        slot: 1
+      iron_pickaxe:
+        material: IRON_PICKAXE
+        buy-price: 100
+        sell-price: 40
+        slot: 2
+      golden_pickaxe:
+        material: GOLDEN_PICKAXE
+        buy-price: 80
+        sell-price: 30
+        slot: 3
+      diamond_pickaxe:
+        material: DIAMOND_PICKAXE
+        buy-price: 800
+        sell-price: 300
+        slot: 4
+      netherite_pickaxe:
+        material: NETHERITE_PICKAXE
+        buy-price: 6000
+        sell-price: 2500
+        slot: 5
+
+  axes:
+    display-name: "&6Axes"
+    enabled: true
+    icon:
+      material: IRON_AXE
+      name: "&6Axes"
+    items:
+      wooden_axe:
+        material: WOODEN_AXE
+        buy-price: 10
+        sell-price: 3
+        slot: 0
+      stone_axe:
+        material: STONE_AXE
+        buy-price: 20
+        sell-price: 8
+        slot: 1
+      iron_axe:
+        material: IRON_AXE
+        buy-price: 100
+        sell-price: 40
+        slot: 2
+      golden_axe:
+        material: GOLDEN_AXE
+        buy-price: 80
+        sell-price: 30
+        slot: 3
+      diamond_axe:
+        material: DIAMOND_AXE
+        buy-price: 800
+        sell-price: 300
+        slot: 4
+      netherite_axe:
+        material: NETHERITE_AXE
+        buy-price: 6000
+        sell-price: 2500
+        slot: 5
+
+  shovels:
+    display-name: "&eShovels"
+    enabled: true
+    icon:
+      material: IRON_SHOVEL
+      name: "&eShovels"
+    items:
+      wooden_shovel:
+        material: WOODEN_SHOVEL
+        buy-price: 8
+        sell-price: 2
+        slot: 0
+      stone_shovel:
+        material: STONE_SHOVEL
+        buy-price: 15
+        sell-price: 5
+        slot: 1
+      iron_shovel:
+        material: IRON_SHOVEL
+        buy-price: 80
+        sell-price: 30
+        slot: 2
+      golden_shovel:
+        material: GOLDEN_SHOVEL
+        buy-price: 60
+        sell-price: 20
+        slot: 3
+      diamond_shovel:
+        material: DIAMOND_SHOVEL
+        buy-price: 600
+        sell-price: 200
+        slot: 4
+      netherite_shovel:
+        material: NETHERITE_SHOVEL
+        buy-price: 5200
+        sell-price: 2000
+        slot: 5
+
+  hoes:
+    display-name: "&aHoes"
+    enabled: true
+    icon:
+      material: IRON_HOE
+      name: "&aHoes"
+    items:
+      wooden_hoe:
+        material: WOODEN_HOE
+        buy-price: 8
+        sell-price: 2
+        slot: 0
+      stone_hoe:
+        material: STONE_HOE
+        buy-price: 15
+        sell-price: 5
+        slot: 1
+      iron_hoe:
+        material: IRON_HOE
+        buy-price: 80
+        sell-price: 30
+        slot: 2
+      golden_hoe:
+        material: GOLDEN_HOE
+        buy-price: 60
+        sell-price: 20
+        slot: 3
+      diamond_hoe:
+        material: DIAMOND_HOE
+        buy-price: 600
+        sell-price: 200
+        slot: 4
+      netherite_hoe:
+        material: NETHERITE_HOE
+        buy-price: 5200
+        sell-price: 2000
+        slot: 5
+
+  swords:
+    display-name: "&cSwords"
+    enabled: true
+    icon:
+      material: IRON_SWORD
+      name: "&cSwords"
+    items:
+      wooden_sword:
+        material: WOODEN_SWORD
+        buy-price: 10
+        sell-price: 3
+        slot: 0
+      stone_sword:
+        material: STONE_SWORD
+        buy-price: 20
+        sell-price: 8
+        slot: 1
+      iron_sword:
+        material: IRON_SWORD
+        buy-price: 100
+        sell-price: 40
+        slot: 2
+      golden_sword:
+        material: GOLDEN_SWORD
+        buy-price: 80
+        sell-price: 30
+        slot: 3
+      diamond_sword:
+        material: DIAMOND_SWORD
+        buy-price: 800
+        sell-price: 300
+        slot: 4
+      netherite_sword:
+        material: NETHERITE_SWORD
+        buy-price: 6000
+        sell-price: 2500
+        slot: 5
+
+  misc_tools:
+    display-name: "&bMisc Tools"
+    enabled: true
+    icon:
+      material: FISHING_ROD
+      name: "&bMisc Tools"
+    items:
+      fishing_rod:
+        material: FISHING_ROD
+        buy-price: 30
+        sell-price: 12
+        slot: 0
+      shears:
+        material: SHEARS
+        buy-price: 50
+        sell-price: 20
+        slot: 1
+      flint_and_steel:
+        material: FLINT_AND_STEEL
+        buy-price: 40
+        sell-price: 15
+        slot: 2
+      bow:
+        material: BOW
+        buy-price: 60
+        sell-price: 25
+        slot: 3
+      crossbow:
+        material: CROSSBOW
+        buy-price: 120
+        sell-price: 50
+        slot: 4
+      trident:
+        material: TRIDENT
+        buy-price: 500
+        sell-price: 200
+        slot: 5
+      bucket:
+        material: BUCKET
+        buy-price: 30
+        sell-price: 12
+        slot: 6
+      water_bucket:
+        material: WATER_BUCKET
+        buy-price: 35
+        sell-price: 15
+        slot: 7
+      lava_bucket:
+        material: LAVA_BUCKET
+        buy-price: 50
+        sell-price: 20
+        slot: 8
+      compass:
+        material: COMPASS
+        buy-price: 25
+        sell-price: 10
+        slot: 9
+      clock:
+        material: CLOCK
+        buy-price: 25
+        sell-price: 10
+        slot: 10
+      spyglass:
+        material: SPYGLASS
+        buy-price: 100
+        sell-price: 40
+        slot: 11
+      lead:
+        material: LEAD
+        buy-price: 15
+        sell-price: 6
+        slot: 12
+      name_tag:
+        material: NAME_TAG
+        buy-price: 200
+        sell-price: 80
+        slot: 13
+      saddle:
+        material: SADDLE
+        buy-price: 150
+        sell-price: 60
+        slot: 14
+      arrow:
+        material: ARROW
+        buy-price: 2
+        sell-price: 1
+        slot: 18
+      spectral_arrow:
+        material: SPECTRAL_ARROW
+        buy-price: 5
+        sell-price: 2
+        slot: 19
+      tipped_arrow:
+        material: TIPPED_ARROW
+        buy-price: 10
+        sell-price: 4
+        slot: 20

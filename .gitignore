@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local server test
+run/
+server/
+plugins/FluxShop/
+
+# Claude Code
+.claude/
+
+# Scratch files
+build_*.txt
+plan.md

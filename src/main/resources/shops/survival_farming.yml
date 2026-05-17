@@ -1,0 +1,375 @@
+id: survival_farming
+display-name: "&aFarming"
+enabled: true
+display-slot: 20
+display-item:
+  material: WHEAT
+  name: "&a🌾 &fFarming"
+  lore:
+    - "&8Seeds, saplings, dyes and flowers"
+
+categories:
+  seeds:
+    display-name: "&aSeeds & Saplings"
+    enabled: true
+    icon:
+      material: OAK_SAPLING
+      name: "&aSeeds & Saplings"
+    items:
+      wheat_seeds:
+        material: WHEAT_SEEDS
+        buy-price: 1
+        sell-price: 0.5
+        slot: 0
+      melon_seeds:
+        material: MELON_SEEDS
+        buy-price: 3
+        sell-price: 1
+        slot: 1
+      pumpkin_seeds:
+        material: PUMPKIN_SEEDS
+        buy-price: 3
+        sell-price: 1
+        slot: 2
+      beetroot_seeds:
+        material: BEETROOT_SEEDS
+        buy-price: 1
+        sell-price: 0.5
+        slot: 3
+      oak_sapling:
+        material: OAK_SAPLING
+        buy-price: 3
+        sell-price: 1
+        slot: 4
+      birch_sapling:
+        material: BIRCH_SAPLING
+        buy-price: 3
+        sell-price: 1
+        slot: 5
+      spruce_sapling:
+        material: SPRUCE_SAPLING
+        buy-price: 3
+        sell-price: 1
+        slot: 6
+      jungle_sapling:
+        material: JUNGLE_SAPLING
+        buy-price: 5
+        sell-price: 2
+        slot: 7
+      acacia_sapling:
+        material: ACACIA_SAPLING
+        buy-price: 3
+        sell-price: 1
+        slot: 8
+      dark_oak_sapling:
+        material: DARK_OAK_SAPLING
+        buy-price: 3
+        sell-price: 1
+        slot: 9
+      mangrove_propagule:
+        material: MANGROVE_PROPAGULE
+        buy-price: 5
+        sell-price: 2
+        slot: 10
+      cherry_sapling:
+        material: CHERRY_SAPLING
+        buy-price: 5
+        sell-price: 2
+        slot: 11
+      bamboo:
+        material: BAMBOO
+        buy-price: 2
+        sell-price: 1
+        slot: 12
+      cactus:
+        material: CACTUS
+        buy-price: 2
+        sell-price: 1
+        slot: 13
+      sugar_cane:
+        material: SUGAR_CANE
+        buy-price: 2
+        sell-price: 1
+        slot: 14
+      kelp:
+        material: KELP
+        buy-price: 1
+        sell-price: 0.5
+        slot: 15
+
+  bonemeal:
+    display-name: "&fBonemeal & Fertilizers"
+    enabled: true
+    icon:
+      material: BONE_MEAL
+      name: "&fBonemeal & Fertilizers"
+    items:
+      bone_meal:
+        material: BONE_MEAL
+        buy-price: 3
+        sell-price: 1
+        slot: 0
+      bone:
+        material: BONE
+        buy-price: 5
+        sell-price: 2
+        slot: 1
+      composter:
+        material: COMPOSTER
+        buy-price: 30
+        sell-price: 12
+        slot: 2
+      dirt:
+        material: DIRT
+        buy-price: 1
+        sell-price: 0.5
+        slot: 3
+      coarse_dirt:
+        material: COARSE_DIRT
+        buy-price: 1
+        sell-price: 0.5
+        slot: 4
+      podzol:
+        material: PODZOL
+        buy-price: 2
+        sell-price: 1
+        slot: 5
+      rooted_dirt:
+        material: ROOTED_DIRT
+        buy-price: 2
+        sell-price: 1
+        slot: 6
+      mud:
+        material: MUD
+        buy-price: 2
+        sell-price: 1
+        slot: 7
+
+  flowers:
+    display-name: "&dFlowers"
+    enabled: true
+    icon:
+      material: SUNFLOWER
+      name: "&dFlowers"
+    items:
+      dandelion:
+        material: DANDELION
+        buy-price: 2
+        sell-price: 1
+        slot: 0
+      poppy:
+        material: POPPY
+        buy-price: 2
+        sell-price: 1
+        slot: 1
+      blue_orchid:
+        material: BLUE_ORCHID
+        buy-price: 3
+        sell-price: 1
+        slot: 2
+      allium:
+        material: ALLIUM
+        buy-price: 2
+        sell-price: 1
+        slot: 3
+      azure_bluet:
+        material: AZURE_BLUET
+        buy-price: 2
+        sell-price: 1
+        slot: 4
+      red_tulip:
+        material: RED_TULIP
+        buy-price: 2
+        sell-price: 1
+        slot: 5
+      orange_tulip:
+        material: ORANGE_TULIP
+        buy-price: 2
+        sell-price: 1
+        slot: 6
+      white_tulip:
+        material: WHITE_TULIP
+        buy-price: 2
+        sell-price: 1
+        slot: 7
+      pink_tulip:
+        material: PINK_TULIP
+        buy-price: 2
+        sell-price: 1
+        slot: 8
+      oxeye_daisy:
+        material: OXEYE_DAISY
+        buy-price: 2
+        sell-price: 1
+        slot: 9
+      cornflower:
+        material: CORNFLOWER
+        buy-price: 2
+        sell-price: 1
+        slot: 10
+      lily_of_the_valley:
+        material: LILY_OF_THE_VALLEY
+        buy-price: 3
+        sell-price: 1
+        slot: 11
+      wither_rose:
+        material: WITHER_ROSE
+        buy-price: 50
+        sell-price: 20
+        slot: 12
+      sunflower:
+        material: SUNFLOWER
+        buy-price: 4
+        sell-price: 2
+        slot: 13
+      lilac:
+        material: LILAC
+        buy-price: 4
+        sell-price: 2
+        slot: 14
+      rose_bush:
+        material: ROSE_BUSH
+        buy-price: 4
+        sell-price: 2
+        slot: 15
+      peony:
+        material: PEONY
+        buy-price: 4
+        sell-price: 2
+        slot: 16
+      pitcher_plant:
+        material: PITCHER_PLANT
+        buy-price: 8
+        sell-price: 3
+        slot: 17
+
+  dyes:
+    display-name: "&eDyes"
+    enabled: true
+    icon:
+      material: CYAN_DYE
+      name: "&eDyes"
+    items:
+      white_dye:
+        material: WHITE_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 0
+      orange_dye:
+        material: ORANGE_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 1
+      magenta_dye:
+        material: MAGENTA_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 2
+      light_blue_dye:
+        material: LIGHT_BLUE_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 3
+      yellow_dye:
+        material: YELLOW_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 4
+      lime_dye:
+        material: LIME_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 5
+      pink_dye:
+        material: PINK_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 6
+      gray_dye:
+        material: GRAY_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 7
+      light_gray_dye:
+        material: LIGHT_GRAY_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 8
+      cyan_dye:
+        material: CYAN_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 9
+      purple_dye:
+        material: PURPLE_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 10
+      blue_dye:
+        material: BLUE_DYE
+        buy-price: 8
+        sell-price: 3
+        slot: 11
+      brown_dye:
+        material: BROWN_DYE
+        buy-price: 8
+        sell-price: 3
+        slot: 12
+      green_dye:
+        material: GREEN_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 13
+      red_dye:
+        material: RED_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 14
+      black_dye:
+        material: BLACK_DYE
+        buy-price: 5
+        sell-price: 2
+        slot: 15
+
+  mushrooms:
+    display-name: "&aMushrooms & Fungi"
+    enabled: true
+    icon:
+      material: RED_MUSHROOM
+      name: "&aMushrooms & Fungi"
+    items:
+      brown_mushroom:
+        material: BROWN_MUSHROOM
+        buy-price: 4
+        sell-price: 2
+        slot: 0
+      red_mushroom:
+        material: RED_MUSHROOM
+        buy-price: 4
+        sell-price: 2
+        slot: 1
+      brown_mushroom_block:
+        material: BROWN_MUSHROOM_BLOCK
+        buy-price: 6
+        sell-price: 2
+        slot: 2
+      red_mushroom_block:
+        material: RED_MUSHROOM_BLOCK
+        buy-price: 6
+        sell-price: 2
+        slot: 3
+      mushroom_stem:
+        material: MUSHROOM_STEM
+        buy-price: 6
+        sell-price: 2
+        slot: 4
+      crimson_fungus:
+        material: CRIMSON_FUNGUS
+        buy-price: 5
+        sell-price: 2
+        slot: 5
+      warped_fungus:
+        material: WARPED_FUNGUS
+        buy-price: 5
+        sell-price: 2
+        slot: 6

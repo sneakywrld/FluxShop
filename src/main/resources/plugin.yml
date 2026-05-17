@@ -1,0 +1,197 @@
+name: FluxShop
+version: '${version}'
+main: dev.fluxshop.FluxShopPlugin
+api-version: '1.13'
+description: The ultimate server shop — buy, sell, auction, trade, and more.
+authors: [ sneakywrld ]
+website: https://github.com/sneakywrld/FluxShop
+prefix: FluxShop
+
+softdepend:
+  - Flux
+  - Vault
+  - Essentials
+  - CMI
+  - PlaceholderAPI
+  - MythicMobs
+  - Citizens
+  - ZNPCsPlus
+  - DiscordSRV
+  - LuckPerms
+  - WorldGuard
+  - WorldEdit
+  - ItemsAdder
+  - Oraxen
+  - RoseStacker
+  - WildStacker
+  - SilkSpawners
+  - UltimateStacker
+  - SmartSpawner
+  - EpicSpawners
+  - MineableSpawners
+  - SpawnerMeta
+  - PlayerPoints
+  - CoinsEngine
+  - RealisticSeasons
+  - GeyserMC
+  - floodgate
+
+commands:
+  shop:
+    description: Open the server shop
+    usage: /shop [section]
+    aliases: [ store, market ]
+    permission: fluxshop.shop
+
+  sellall:
+    description: Sell all sellable items in your inventory
+    usage: /sellall [hand|<material>]
+    aliases: [ sa ]
+    permission: fluxshop.sellall
+
+  sellgui:
+    description: Open the drag-and-drop sell interface
+    usage: /sellgui
+    aliases: [ sgui, sellmenu ]
+    permission: fluxshop.sellgui
+
+  auction:
+    description: Access the auction house
+    usage: /auction [list|listings|collect|history]
+    aliases: [ ah, auctionhouse ]
+    permission: fluxshop.auction
+
+  trade:
+    description: Send or accept a trade request
+    usage: /trade <player>
+    aliases: [ tr ]
+    permission: fluxshop.trade
+
+  blackmarket:
+    description: Open the Black Market
+    usage: /blackmarket
+    aliases: [ bm, blackshop ]
+    permission: fluxshop.blackmarket
+
+  fluxshop:
+    description: FluxShop admin commands
+    usage: /fluxshop <reload|editor|give|setprice|setmodifier|restock|analytics|stand|import|export>
+    aliases: [ fs, shopAdmin ]
+    permission: fluxshop.admin
+
+permissions:
+  fluxshop.*:
+    description: Grants all FluxShop permissions
+    default: op
+    children:
+      fluxshop.shop: true
+      fluxshop.sellall: true
+      fluxshop.sellgui: true
+      fluxshop.auction: true
+      fluxshop.auction.list: true
+      fluxshop.trade: true
+      fluxshop.blackmarket: true
+      fluxshop.admin: true
+      fluxshop.admin.reload: true
+      fluxshop.admin.editor: true
+      fluxshop.admin.give: true
+      fluxshop.admin.setprice: true
+      fluxshop.admin.setmodifier: true
+      fluxshop.admin.restock: true
+      fluxshop.admin.analytics: true
+      fluxshop.admin.stand: true
+      fluxshop.admin.import: true
+      fluxshop.admin.export: true
+      fluxshop.bypass.stock: true
+      fluxshop.bypass.cooldown: true
+
+  fluxshop.shop:
+    description: Access /shop
+    default: true
+
+  fluxshop.sellall:
+    description: Access /sellall
+    default: true
+
+  fluxshop.sellgui:
+    description: Access /sellgui
+    default: true
+
+  fluxshop.auction:
+    description: Access /auction (browse & bid)
+    default: true
+
+  fluxshop.auction.list:
+    description: List items on the auction house
+    default: true
+
+  fluxshop.trade:
+    description: Send and receive trade requests
+    default: true
+
+  fluxshop.blackmarket:
+    description: Access the Black Market
+    default: op
+
+  fluxshop.admin:
+    description: All admin commands
+    default: op
+    children:
+      fluxshop.admin.reload: true
+      fluxshop.admin.editor: true
+      fluxshop.admin.give: true
+      fluxshop.admin.setprice: true
+      fluxshop.admin.setmodifier: true
+      fluxshop.admin.restock: true
+      fluxshop.admin.analytics: true
+      fluxshop.admin.stand: true
+      fluxshop.admin.import: true
+      fluxshop.admin.export: true
+
+  fluxshop.admin.reload:
+    description: Reload all FluxShop configs
+    default: op
+
+  fluxshop.admin.editor:
+    description: Use the in-game shop editor
+    default: op
+
+  fluxshop.admin.give:
+    description: Give shop items to players
+    default: op
+
+  fluxshop.admin.setprice:
+    description: Change item buy/sell prices
+    default: op
+
+  fluxshop.admin.setmodifier:
+    description: Set per-player price modifiers
+    default: op
+
+  fluxshop.admin.restock:
+    description: Force restock a shop
+    default: op
+
+  fluxshop.admin.analytics:
+    description: View shop analytics dashboard
+    default: op
+
+  fluxshop.admin.import:
+    description: Import prices from Essentials/other plugins
+    default: op
+
+  fluxshop.admin.export:
+    description: Export shop config
+    default: op
+
+  fluxshop.admin.stand:
+    description: Register/remove physical shop stand blocks
+    default: op
+
+  fluxshop.bypass.stock:
+    description: Bypass stock limits
+    default: op
+
+  fluxshop.bypass.cooldown:
+    description: Bypass trade cooldowns
+    default: op

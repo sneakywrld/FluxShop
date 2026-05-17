@@ -1,0 +1,124 @@
+# ╔══════════════════════════════════════════════════════════════╗
+# ║            FluxShop  —  black_market_pool.yml               ║
+# ║  Define the pool of items the Black Market draws from.      ║
+# ║  Each rotation randomly selects N items from this list.     ║
+# ║  N is controlled by black-market.items-per-rotation in      ║
+# ║  config.yml (default: 6).                                   ║
+# ╚══════════════════════════════════════════════════════════════╝
+
+# Format for each entry:
+#   <key>:
+#     material: MATERIAL_NAME           # Bukkit Material enum (required)
+#     price: 1000.0                     # Buy price in the specified currency
+#     currency: vault                   # Economy provider id (default: server default)
+#     stock: 10                         # How many are available per rotation
+#     max-per-player: 3                 # Per-player purchase limit per rotation (0 = unlimited)
+#     display-name: "&5Mystery Item"    # Optional custom display name
+#
+# Items are shuffled each rotation. Add as many as you like —
+# only items-per-rotation of them will appear at a time.
+
+# ── Rare / End-game ───────────────────────────────────────────────────────────
+
+enchanted_golden_apple:
+  material: ENCHANTED_GOLDEN_APPLE
+  price: 8000.0
+  stock: 5
+  max-per-player: 1
+
+elytra:
+  material: ELYTRA
+  price: 5000.0
+  stock: 3
+  max-per-player: 1
+
+nether_star:
+  material: NETHER_STAR
+  price: 4000.0
+  stock: 5
+  max-per-player: 2
+
+netherite_ingot:
+  material: NETHERITE_INGOT
+  price: 3000.0
+  stock: 10
+  max-per-player: 3
+
+dragon_head:
+  material: DRAGON_HEAD
+  price: 3000.0
+  stock: 2
+  max-per-player: 1
+
+ancient_debris:
+  material: ANCIENT_DEBRIS
+  price: 2000.0
+  stock: 10
+  max-per-player: 5
+
+totem_of_undying:
+  material: TOTEM_OF_UNDYING
+  price: 2000.0
+  stock: 5
+  max-per-player: 2
+
+# ── Mid-tier ──────────────────────────────────────────────────────────────────
+
+wither_skeleton_skull:
+  material: WITHER_SKELETON_SKULL
+  price: 1200.0
+  stock: 8
+  max-per-player: 3
+
+sniffer_egg:
+  material: SNIFFER_EGG
+  price: 1500.0
+  stock: 4
+  max-per-player: 2
+
+music_disc_pigstep:
+  material: MUSIC_DISC_PIGSTEP
+  price: 800.0
+  stock: 5
+  max-per-player: 2
+
+heart_of_the_sea:
+  material: HEART_OF_THE_SEA
+  price: 800.0
+  stock: 8
+  max-per-player: 3
+
+end_crystal:
+  material: END_CRYSTAL
+  price: 500.0
+  stock: 10
+  max-per-player: 5
+
+trident:
+  material: TRIDENT
+  price: 400.0
+  stock: 5
+  max-per-player: 2
+
+shulker_shell:
+  material: SHULKER_SHELL
+  price: 150.0
+  stock: 20
+  max-per-player: 5
+
+# ── Special / Seasonal ────────────────────────────────────────────────────────
+
+# Add custom items or MythicMobs items here using the mythic-item key:
+#
+# my_mythic_item:
+#   mythic-item: MythicSword
+#   price: 5000.0
+#   stock: 3
+#   max-per-player: 1
+#
+# ItemsAdder items:
+#   my_ia_item:
+#     items-adder: mypack:special_sword
+#     price: 2500.0
+#     stock: 5
+#     max-per-player: 2

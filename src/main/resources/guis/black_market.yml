@@ -1,0 +1,102 @@
+# ── Black Market GUI ──────────────────────────────────────────────────────────
+# A mysterious rotating shop with rare/limited items.
+# The "dark" aesthetic sets it apart from the main shop.
+
+title: "<dark_purple><bold>☠ Black Market ☠"
+
+rows: 6
+
+border:
+  enabled: true
+  # Skull head border for extra atmosphere
+  material: WITHER_SKELETON_SKULL
+  name: "<dark_gray>☠"
+  # Alternate with black glass to avoid lag on slower servers
+  alternate-material: BLACK_STAINED_GLASS_PANE
+
+background:
+  material: BLACK_STAINED_GLASS_PANE
+  name: " "
+
+animated-border:
+  enabled: true
+  interval-ticks: 15
+  frames:
+    - WITHER_SKELETON_SKULL
+    - BLACK_STAINED_GLASS_PANE
+    - WITHER_SKELETON_SKULL
+    - GRAY_STAINED_GLASS_PANE
+
+# Item display slots (inner 4×7 area)
+item-slots:
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+
+# Listing lore template
+listing-lore:
+  - ""
+  - "<dark_gray>Price: <gold>{price} {currency}</gold>"
+  - "<dark_gray>Stock: <white>{stock} remaining</white>"
+  - "<dark_gray>Your purchases: <white>{bought}/{max}</white>"
+  - ""
+  - "<dark_purple>Resets in: <white>{countdown}</white>"
+  - ""
+  - "<gray>Left-click to purchase"
+
+# Countdown timer display (slot 4 — top center)
+countdown:
+  slot: 4
+  material: CLOCK
+  name: "<dark_purple>Next Rotation"
+  lore:
+    - "<gray>Resets in: <white>{countdown}</white>"
+    - "<gray>Items change each rotation."
+
+# Close button
+close:
+  slot: 49
+  material: BARRIER
+  name: "<red>Leave the Black Market"
+  action: CLOSE
+
+# Decoration items
+decorations:
+  - slot: 45
+    material: NETHER_BRICK
+    name: " "
+  - slot: 53
+    material: NETHER_BRICK
+    name: " "
+  - slot: 46
+    material: SOUL_SAND
+    name: " "
+  - slot: 52
+    material: SOUL_SAND
+    name: " "
+
+# Open sound (overrides config.yml for this GUI specifically)
+open-sound: blackmarket-open
+# Particle burst on open
+open-particle:
+  enabled: true
+  type: PORTAL
+  count: 40

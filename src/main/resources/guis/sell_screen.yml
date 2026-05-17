@@ -1,0 +1,93 @@
+# ── Sell Transaction Screen GUI ───────────────────────────────────────────────
+# Shown when a player right-clicks an item to sell it.
+# Mirror of buy_screen.yml but for selling.
+
+# {item} = item display name
+title: "<gold><bold>Sell {item}"
+
+rows: 4
+
+border:
+  enabled: true
+  material: GOLD_STAINED_GLASS_PANE
+  name: " "
+
+background:
+  material: GRAY_STAINED_GLASS_PANE
+  name: " "
+
+preview-slot: 13
+
+price-display:
+  slot: 11
+  material: GOLD_NUGGET
+  name: "<gold><bold>Price Info"
+  lore:
+    - "<gray>Sell price: <gold>{sell-price} {currency}</gold>"
+    - "<gray>Quantity:   <white>x{amount}</white>"
+    - "<gray>Total:      <gold>{total} {currency}</gold>"
+    - ""
+    - "<gray>You have: <white>x{inventory-count}</white>"
+
+quantities:
+  - slot: 18
+    amount: 1
+    material: WHITE_STAINED_GLASS_PANE
+    name: "<white>x1"
+
+  - slot: 19
+    amount: 8
+    material: YELLOW_STAINED_GLASS_PANE
+    name: "<yellow>x8"
+
+  - slot: 20
+    amount: 16
+    material: ORANGE_STAINED_GLASS_PANE
+    name: "<gold>x16"
+
+  - slot: 21
+    amount: 32
+    material: ORANGE_STAINED_GLASS_PANE
+    name: "<gold>x32"
+
+  - slot: 22
+    amount: 64
+    material: RED_STAINED_GLASS_PANE
+    name: "<red>x64"
+
+  # Sell ALL of this item in inventory
+  - slot: 23
+    amount: ALL
+    material: LIME_STAINED_GLASS_PANE
+    name: "<green>All (<white>{all}</white>)"
+    lore:
+      - "<gray>Sell all of this item you carry."
+
+  # Custom
+  - slot: 24
+    amount: CUSTOM
+    material: WRITABLE_BOOK
+    name: "<yellow>Custom Amount"
+    lore:
+      - "<gray>Click to enter a custom amount."
+
+confirm:
+  slot: 15
+  material: GOLD_BLOCK
+  name: "<gold><bold>✔ Confirm Sale"
+  lore:
+    - "<gray>Sell <white>x{amount} {item}</white>"
+    - "<gray>for <gold>{total} {currency}</gold>."
+
+cancel:
+  slot: 17
+  material: RED_CONCRETE
+  name: "<red><bold>✘ Cancel"
+  lore:
+    - "<gray>Go back without selling."
+
+back:
+  slot: 31
+  material: ARROW
+  name: "<gray>◁ Back"
+  action: BACK

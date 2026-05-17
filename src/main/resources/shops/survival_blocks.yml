@@ -1,0 +1,440 @@
+id: survival_blocks
+display-name: "&7⛏ Blocks"
+enabled: true
+display-slot: 10
+display-item:
+  material: STONE
+  name: "&7⛏ &fBlocks"
+  lore:
+    - "&8Stone, wood, glass, concrete and more"
+
+categories:
+  stone:
+    display-name: "&7Stone & Earth"
+    enabled: true
+    icon:
+      material: STONE
+      name: "&7Stone & Earth"
+    items:
+      cobblestone:
+        material: COBBLESTONE
+        buy-price: 2
+        sell-price: 1
+        slot: 0
+      stone:
+        material: STONE
+        buy-price: 4
+        sell-price: 2
+        slot: 1
+      dirt:
+        material: DIRT
+        buy-price: 1
+        sell-price: 0.5
+        slot: 2
+      grass_block:
+        material: GRASS_BLOCK
+        buy-price: 3
+        sell-price: 1
+        slot: 3
+      sand:
+        material: SAND
+        buy-price: 2
+        sell-price: 1
+        slot: 4
+      gravel:
+        material: GRAVEL
+        buy-price: 2
+        sell-price: 1
+        slot: 5
+      flint:
+        material: FLINT
+        buy-price: 5
+        sell-price: 2
+        slot: 6
+      clay:
+        material: CLAY
+        buy-price: 5
+        sell-price: 2
+        slot: 7
+      clay_ball:
+        material: CLAY_BALL
+        buy-price: 2
+        sell-price: 1
+        slot: 8
+      mud:
+        material: MUD
+        buy-price: 2
+        sell-price: 1
+        slot: 9
+      diorite:
+        material: DIORITE
+        buy-price: 3
+        sell-price: 1
+        slot: 10
+      andesite:
+        material: ANDESITE
+        buy-price: 3
+        sell-price: 1
+        slot: 11
+      granite:
+        material: GRANITE
+        buy-price: 3
+        sell-price: 1
+        slot: 12
+      deepslate:
+        material: DEEPSLATE
+        buy-price: 4
+        sell-price: 2
+        slot: 13
+      calcite:
+        material: CALCITE
+        buy-price: 4
+        sell-price: 2
+        slot: 14
+      tuff:
+        material: TUFF
+        buy-price: 4
+        sell-price: 2
+        slot: 15
+
+  glass:
+    display-name: "&bGlass & Panes"
+    enabled: true
+    icon:
+      material: GLASS
+      name: "&bGlass & Panes"
+    items:
+      glass:
+        material: GLASS
+        buy-price: 5
+        sell-price: 2
+        slot: 0
+      white_glass:
+        material: WHITE_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 1
+      orange_glass:
+        material: ORANGE_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 2
+      magenta_glass:
+        material: MAGENTA_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 3
+      light_blue_glass:
+        material: LIGHT_BLUE_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 4
+      yellow_glass:
+        material: YELLOW_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 5
+      lime_glass:
+        material: LIME_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 6
+      pink_glass:
+        material: PINK_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 7
+      gray_glass:
+        material: GRAY_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 8
+      cyan_glass:
+        material: CYAN_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 9
+      purple_glass:
+        material: PURPLE_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 10
+      blue_glass:
+        material: BLUE_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 11
+      brown_glass:
+        material: BROWN_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 12
+      green_glass:
+        material: GREEN_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 13
+      red_glass:
+        material: RED_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 14
+      black_glass:
+        material: BLACK_STAINED_GLASS
+        buy-price: 6
+        sell-price: 3
+        slot: 15
+
+  wood:
+    display-name: "&6Wood"
+    enabled: true
+    icon:
+      material: OAK_LOG
+      name: "&6Wood"
+    items:
+      oak_log:
+        material: OAK_LOG
+        buy-price: 8
+        sell-price: 4
+        slot: 0
+      birch_log:
+        material: BIRCH_LOG
+        buy-price: 8
+        sell-price: 4
+        slot: 1
+      spruce_log:
+        material: SPRUCE_LOG
+        buy-price: 8
+        sell-price: 4
+        slot: 2
+      jungle_log:
+        material: JUNGLE_LOG
+        buy-price: 8
+        sell-price: 4
+        slot: 3
+      acacia_log:
+        material: ACACIA_LOG
+        buy-price: 8
+        sell-price: 4
+        slot: 4
+      dark_oak_log:
+        material: DARK_OAK_LOG
+        buy-price: 8
+        sell-price: 4
+        slot: 5
+      mangrove_log:
+        material: MANGROVE_LOG
+        buy-price: 10
+        sell-price: 5
+        slot: 6
+      oak_planks:
+        material: OAK_PLANKS
+        buy-price: 3
+        sell-price: 1
+        slot: 9
+      birch_planks:
+        material: BIRCH_PLANKS
+        buy-price: 3
+        sell-price: 1
+        slot: 10
+      spruce_planks:
+        material: SPRUCE_PLANKS
+        buy-price: 3
+        sell-price: 1
+        slot: 11
+      jungle_planks:
+        material: JUNGLE_PLANKS
+        buy-price: 3
+        sell-price: 1
+        slot: 12
+      acacia_planks:
+        material: ACACIA_PLANKS
+        buy-price: 3
+        sell-price: 1
+        slot: 13
+      dark_oak_planks:
+        material: DARK_OAK_PLANKS
+        buy-price: 3
+        sell-price: 1
+        slot: 14
+
+  ores:
+    display-name: "&eOres & Minerals"
+    enabled: true
+    icon:
+      material: DIAMOND_ORE
+      name: "&eOres & Minerals"
+    items:
+      coal:
+        material: COAL
+        buy-price: 10
+        sell-price: 5
+        slot: 0
+      iron_ingot:
+        material: IRON_INGOT
+        buy-price: 50
+        sell-price: 25
+        slot: 1
+      gold_ingot:
+        material: GOLD_INGOT
+        buy-price: 80
+        sell-price: 40
+        slot: 2
+      diamond:
+        material: DIAMOND
+        buy-price: 500
+        sell-price: 250
+        slot: 3
+      emerald:
+        material: EMERALD
+        buy-price: 600
+        sell-price: 300
+        slot: 4
+      lapis_lazuli:
+        material: LAPIS_LAZULI
+        buy-price: 20
+        sell-price: 10
+        slot: 5
+      redstone:
+        material: REDSTONE
+        buy-price: 15
+        sell-price: 7
+        slot: 6
+      quartz:
+        material: QUARTZ
+        buy-price: 25
+        sell-price: 12
+        slot: 7
+      amethyst_shard:
+        material: AMETHYST_SHARD
+        buy-price: 30
+        sell-price: 15
+        slot: 8
+      copper_ingot:
+        material: COPPER_INGOT
+        buy-price: 20
+        sell-price: 10
+        slot: 9
+      netherite_ingot:
+        material: NETHERITE_INGOT
+        buy-price: 5000
+        sell-price: 2500
+        slot: 10
+      netherite_scrap:
+        material: NETHERITE_SCRAP
+        buy-price: 800
+        sell-price: 400
+        slot: 11
+
+  concrete:
+    display-name: "&fConcrete & Wool"
+    enabled: true
+    icon:
+      material: WHITE_CONCRETE
+      name: "&fConcrete & Wool"
+    items:
+      white_concrete:
+        material: WHITE_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 0
+      orange_concrete:
+        material: ORANGE_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 1
+      magenta_concrete:
+        material: MAGENTA_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 2
+      light_blue_concrete:
+        material: LIGHT_BLUE_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 3
+      yellow_concrete:
+        material: YELLOW_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 4
+      lime_concrete:
+        material: LIME_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 5
+      pink_concrete:
+        material: PINK_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 6
+      gray_concrete:
+        material: GRAY_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 7
+      light_gray_concrete:
+        material: LIGHT_GRAY_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 8
+      cyan_concrete:
+        material: CYAN_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 9
+      purple_concrete:
+        material: PURPLE_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 10
+      blue_concrete:
+        material: BLUE_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 11
+      brown_concrete:
+        material: BROWN_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 12
+      green_concrete:
+        material: GREEN_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 13
+      red_concrete:
+        material: RED_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 14
+      black_concrete:
+        material: BLACK_CONCRETE
+        buy-price: 8
+        sell-price: 4
+        slot: 15
+      white_wool:
+        material: WHITE_WOOL
+        buy-price: 10
+        sell-price: 5
+        slot: 18
+      black_wool:
+        material: BLACK_WOOL
+        buy-price: 12
+        sell-price: 6
+        slot: 19
+      red_wool:
+        material: RED_WOOL
+        buy-price: 10
+        sell-price: 5
+        slot: 20
+      blue_wool:
+        material: BLUE_WOOL
+        buy-price: 10
+        sell-price: 5
+        slot: 21
+      green_wool:
+        material: GREEN_WOOL
+        buy-price: 10
+        sell-price: 5
+        slot: 22

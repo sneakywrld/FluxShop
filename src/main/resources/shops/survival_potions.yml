@@ -1,0 +1,276 @@
+id: survival_potions
+display-name: "&5⚗ Potions"
+enabled: true
+display-slot: 14
+display-item:
+  material: POTION
+  name: "&5⚗ &fPotions"
+  lore:
+    - "&8Potions, splash potions and more"
+
+categories:
+  potions:
+    display-name: "&5Potions"
+    enabled: true
+    icon:
+      material: POTION
+      name: "&5Potions"
+    items:
+      speed_potion:
+        material: POTION
+        potion-type: SWIFTNESS
+        buy-price: 30
+        sell-price: 12
+        slot: 0
+      strength_potion:
+        material: POTION
+        potion-type: STRENGTH
+        buy-price: 50
+        sell-price: 20
+        slot: 1
+      healing_potion:
+        material: POTION
+        potion-type: HEALING
+        buy-price: 40
+        sell-price: 15
+        slot: 2
+      regeneration_potion:
+        material: POTION
+        potion-type: REGENERATION
+        buy-price: 60
+        sell-price: 25
+        slot: 3
+      fire_resistance_potion:
+        material: POTION
+        potion-type: FIRE_RESISTANCE
+        buy-price: 50
+        sell-price: 20
+        slot: 4
+      night_vision_potion:
+        material: POTION
+        potion-type: NIGHT_VISION
+        buy-price: 35
+        sell-price: 14
+        slot: 5
+      water_breathing_potion:
+        material: POTION
+        potion-type: WATER_BREATHING
+        buy-price: 40
+        sell-price: 16
+        slot: 6
+      invisibility_potion:
+        material: POTION
+        potion-type: INVISIBILITY
+        buy-price: 60
+        sell-price: 25
+        slot: 7
+      leaping_potion:
+        material: POTION
+        potion-type: LEAPING
+        buy-price: 35
+        sell-price: 14
+        slot: 8
+      slowness_potion:
+        material: POTION
+        potion-type: SLOWNESS
+        buy-price: 20
+        sell-price: 8
+        slot: 9
+      slow_falling_potion:
+        material: POTION
+        potion-type: SLOW_FALLING
+        buy-price: 30
+        sell-price: 12
+        slot: 10
+
+  splash_potions:
+    display-name: "&dSplash Potions"
+    enabled: true
+    icon:
+      material: SPLASH_POTION
+      name: "&dSplash Potions"
+    items:
+      splash_speed:
+        material: SPLASH_POTION
+        potion-type: SWIFTNESS
+        buy-price: 35
+        sell-price: 14
+        slot: 0
+      splash_strength:
+        material: SPLASH_POTION
+        potion-type: STRENGTH
+        buy-price: 60
+        sell-price: 25
+        slot: 1
+      splash_healing:
+        material: SPLASH_POTION
+        potion-type: HEALING
+        buy-price: 50
+        sell-price: 20
+        slot: 2
+      splash_fire_resistance:
+        material: SPLASH_POTION
+        potion-type: FIRE_RESISTANCE
+        buy-price: 60
+        sell-price: 25
+        slot: 3
+      splash_weakness:
+        material: SPLASH_POTION
+        potion-type: WEAKNESS
+        buy-price: 25
+        sell-price: 10
+        slot: 4
+      splash_slowness:
+        material: SPLASH_POTION
+        potion-type: SLOWNESS
+        buy-price: 25
+        sell-price: 10
+        slot: 5
+      splash_poison:
+        material: SPLASH_POTION
+        potion-type: POISON
+        buy-price: 40
+        sell-price: 16
+        slot: 6
+      splash_harming:
+        material: SPLASH_POTION
+        potion-type: HARMING
+        buy-price: 45
+        sell-price: 18
+        slot: 7
+
+  lingering_potions:
+    display-name: "&bLingering Potions"
+    enabled: true
+    icon:
+      material: LINGERING_POTION
+      name: "&bLingering Potions"
+    items:
+      lingering_healing:
+        material: LINGERING_POTION
+        potion-type: HEALING
+        buy-price: 80
+        sell-price: 32
+        slot: 0
+      lingering_regeneration:
+        material: LINGERING_POTION
+        potion-type: REGENERATION
+        buy-price: 100
+        sell-price: 40
+        slot: 1
+      lingering_poison:
+        material: LINGERING_POTION
+        potion-type: POISON
+        buy-price: 70
+        sell-price: 28
+        slot: 2
+      lingering_weakness:
+        material: LINGERING_POTION
+        potion-type: WEAKNESS
+        buy-price: 50
+        sell-price: 20
+        slot: 3
+
+  brewing_ingredients:
+    display-name: "&aBrewery Supplies"
+    enabled: true
+    icon:
+      material: BLAZE_POWDER
+      name: "&aBrewery Supplies"
+    items:
+      glass_bottle:
+        material: GLASS_BOTTLE
+        buy-price: 3
+        sell-price: 1
+        slot: 0
+      water_bottle:
+        material: POTION
+        potion-type: WATER
+        buy-price: 5
+        sell-price: 2
+        slot: 1
+      nether_wart:
+        material: NETHER_WART
+        buy-price: 20
+        sell-price: 8
+        slot: 2
+      blaze_powder:
+        material: BLAZE_POWDER
+        buy-price: 30
+        sell-price: 12
+        slot: 3
+      ghast_tear:
+        material: GHAST_TEAR
+        buy-price: 80
+        sell-price: 35
+        slot: 4
+      magma_cream:
+        material: MAGMA_CREAM
+        buy-price: 40
+        sell-price: 16
+        slot: 5
+      fermented_spider_eye:
+        material: FERMENTED_SPIDER_EYE
+        buy-price: 25
+        sell-price: 10
+        slot: 6
+      glistering_melon_slice:
+        material: GLISTERING_MELON_SLICE
+        buy-price: 80
+        sell-price: 35
+        slot: 7
+      golden_carrot:
+        material: GOLDEN_CARROT
+        buy-price: 150
+        sell-price: 60
+        slot: 8
+      puffer_fish:
+        material: PUFFERFISH
+        buy-price: 25
+        sell-price: 10
+        slot: 9
+      rabbit_foot:
+        material: RABBIT_FOOT
+        buy-price: 50
+        sell-price: 20
+        slot: 10
+      sugar:
+        material: SUGAR
+        buy-price: 2
+        sell-price: 1
+        slot: 11
+      spider_eye:
+        material: SPIDER_EYE
+        buy-price: 10
+        sell-price: 4
+        slot: 12
+      redstone:
+        material: REDSTONE
+        buy-price: 15
+        sell-price: 6
+        slot: 13
+      glowstone_dust:
+        material: GLOWSTONE_DUST
+        buy-price: 15
+        sell-price: 6
+        slot: 14
+      gunpowder:
+        material: GUNPOWDER
+        buy-price: 15
+        sell-price: 6
+        slot: 15
+      dragon_breath:
+        material: DRAGON_BREATH
+        buy-price: 200
+        sell-price: 80
+        slot: 18
+      brewing_stand:
+        material: BREWING_STAND
+        buy-price: 80
+        sell-price: 30
+        slot: 19
+      cauldron:
+        material: CAULDRON
+        buy-price: 60
+        sell-price: 25
+        slot: 20

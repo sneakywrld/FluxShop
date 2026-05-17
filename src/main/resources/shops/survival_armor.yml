@@ -1,0 +1,211 @@
+id: survival_armor
+display-name: "&b🛡 Armor"
+enabled: true
+display-slot: 13
+display-item:
+  material: IRON_CHESTPLATE
+  name: "&b🛡 &fArmor"
+  lore:
+    - "&8Helmets, chestplates, leggings and boots"
+
+categories:
+  leather_armor:
+    display-name: "&6Leather Armor"
+    enabled: true
+    icon:
+      material: LEATHER_CHESTPLATE
+      name: "&6Leather Armor"
+    items:
+      leather_helmet:
+        material: LEATHER_HELMET
+        buy-price: 20
+        sell-price: 8
+        slot: 0
+      leather_chestplate:
+        material: LEATHER_CHESTPLATE
+        buy-price: 30
+        sell-price: 12
+        slot: 1
+      leather_leggings:
+        material: LEATHER_LEGGINGS
+        buy-price: 25
+        sell-price: 10
+        slot: 2
+      leather_boots:
+        material: LEATHER_BOOTS
+        buy-price: 20
+        sell-price: 8
+        slot: 3
+
+  chainmail_armor:
+    display-name: "&7Chainmail Armor"
+    enabled: true
+    icon:
+      material: CHAINMAIL_CHESTPLATE
+      name: "&7Chainmail Armor"
+    items:
+      chainmail_helmet:
+        material: CHAINMAIL_HELMET
+        buy-price: 80
+        sell-price: 30
+        slot: 0
+      chainmail_chestplate:
+        material: CHAINMAIL_CHESTPLATE
+        buy-price: 120
+        sell-price: 45
+        slot: 1
+      chainmail_leggings:
+        material: CHAINMAIL_LEGGINGS
+        buy-price: 100
+        sell-price: 38
+        slot: 2
+      chainmail_boots:
+        material: CHAINMAIL_BOOTS
+        buy-price: 80
+        sell-price: 30
+        slot: 3
+
+  iron_armor:
+    display-name: "&fIron Armor"
+    enabled: true
+    icon:
+      material: IRON_CHESTPLATE
+      name: "&fIron Armor"
+    items:
+      iron_helmet:
+        material: IRON_HELMET
+        buy-price: 150
+        sell-price: 60
+        slot: 0
+      iron_chestplate:
+        material: IRON_CHESTPLATE
+        buy-price: 250
+        sell-price: 100
+        slot: 1
+      iron_leggings:
+        material: IRON_LEGGINGS
+        buy-price: 200
+        sell-price: 80
+        slot: 2
+      iron_boots:
+        material: IRON_BOOTS
+        buy-price: 150
+        sell-price: 60
+        slot: 3
+
+  golden_armor:
+    display-name: "&eGolden Armor"
+    enabled: true
+    icon:
+      material: GOLDEN_CHESTPLATE
+      name: "&eGolden Armor"
+    items:
+      golden_helmet:
+        material: GOLDEN_HELMET
+        buy-price: 120
+        sell-price: 45
+        slot: 0
+      golden_chestplate:
+        material: GOLDEN_CHESTPLATE
+        buy-price: 180
+        sell-price: 70
+        slot: 1
+      golden_leggings:
+        material: GOLDEN_LEGGINGS
+        buy-price: 150
+        sell-price: 55
+        slot: 2
+      golden_boots:
+        material: GOLDEN_BOOTS
+        buy-price: 120
+        sell-price: 45
+        slot: 3
+
+  diamond_armor:
+    display-name: "&bDiamond Armor"
+    enabled: true
+    icon:
+      material: DIAMOND_CHESTPLATE
+      name: "&bDiamond Armor"
+    items:
+      diamond_helmet:
+        material: DIAMOND_HELMET
+        buy-price: 1500
+        sell-price: 600
+        slot: 0
+      diamond_chestplate:
+        material: DIAMOND_CHESTPLATE
+        buy-price: 2500
+        sell-price: 1000
+        slot: 1
+      diamond_leggings:
+        material: DIAMOND_LEGGINGS
+        buy-price: 2000
+        sell-price: 800
+        slot: 2
+      diamond_boots:
+        material: DIAMOND_BOOTS
+        buy-price: 1500
+        sell-price: 600
+        slot: 3
+
+  netherite_armor:
+    display-name: "&8Netherite Armor"
+    enabled: true
+    icon:
+      material: NETHERITE_CHESTPLATE
+      name: "&8Netherite Armor"
+    items:
+      netherite_helmet:
+        material: NETHERITE_HELMET
+        buy-price: 12000
+        sell-price: 5000
+        slot: 0
+      netherite_chestplate:
+        material: NETHERITE_CHESTPLATE
+        buy-price: 20000
+        sell-price: 8000
+        slot: 1
+      netherite_leggings:
+        material: NETHERITE_LEGGINGS
+        buy-price: 16000
+        sell-price: 6500
+        slot: 2
+      netherite_boots:
+        material: NETHERITE_BOOTS
+        buy-price: 12000
+        sell-price: 5000
+        slot: 3
+
+  special_armor:
+    display-name: "&dSpecial Items"
+    enabled: true
+    icon:
+      material: ELYTRA
+      name: "&dSpecial Items"
+    items:
+      shield:
+        material: SHIELD
+        buy-price: 100
+        sell-price: 40
+        slot: 0
+      elytra:
+        material: ELYTRA
+        buy-price: 10000
+        sell-price: 4000
+        slot: 1
+      turtle_helmet:
+        material: TURTLE_HELMET
+        buy-price: 800
+        sell-price: 300
+        slot: 2
+      totem_of_undying:
+        material: TOTEM_OF_UNDYING
+        buy-price: 3000
+        sell-price: 1200
+        slot: 3
+      firework_rocket:
+        material: FIREWORK_ROCKET
+        buy-price: 15
+        sell-price: 5
+        slot: 4

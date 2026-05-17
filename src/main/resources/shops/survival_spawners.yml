@@ -1,0 +1,246 @@
+id: survival_spawners
+display-name: "&6Spawners"
+enabled: true
+display-slot: 22
+display-item:
+  material: SPAWNER
+  name: "&6⚙ &fSpawners"
+  lore:
+    - "&8Monster spawners for your farm"
+
+categories:
+  common_spawners:
+    display-name: "&7Common Spawners"
+    enabled: true
+    icon:
+      material: SPAWNER
+      name: "&7Common Spawners"
+    items:
+      zombie_spawner:
+        material: SPAWNER
+        buy-price: 5000
+        sell-price: 2000
+        slot: 0
+        spawner-type: ZOMBIE
+      skeleton_spawner:
+        material: SPAWNER
+        buy-price: 5000
+        sell-price: 2000
+        slot: 1
+        spawner-type: SKELETON
+      spider_spawner:
+        material: SPAWNER
+        buy-price: 5000
+        sell-price: 2000
+        slot: 2
+        spawner-type: SPIDER
+      cave_spider_spawner:
+        material: SPAWNER
+        buy-price: 6000
+        sell-price: 2500
+        slot: 3
+        spawner-type: CAVE_SPIDER
+      creeper_spawner:
+        material: SPAWNER
+        buy-price: 8000
+        sell-price: 3200
+        slot: 4
+        spawner-type: CREEPER
+      silverfish_spawner:
+        material: SPAWNER
+        buy-price: 4000
+        sell-price: 1600
+        slot: 5
+        spawner-type: SILVERFISH
+      endermite_spawner:
+        material: SPAWNER
+        buy-price: 4000
+        sell-price: 1600
+        slot: 6
+        spawner-type: ENDERMITE
+      slime_spawner:
+        material: SPAWNER
+        buy-price: 7000
+        sell-price: 2800
+        slot: 7
+        spawner-type: SLIME
+
+  mid_tier_spawners:
+    display-name: "&eIntermediate Spawners"
+    enabled: true
+    icon:
+      material: SPAWNER
+      name: "&eIntermediate Spawners"
+    items:
+      witch_spawner:
+        material: SPAWNER
+        buy-price: 12000
+        sell-price: 5000
+        slot: 0
+        spawner-type: WITCH
+      enderman_spawner:
+        material: SPAWNER
+        buy-price: 15000
+        sell-price: 6000
+        slot: 1
+        spawner-type: ENDERMAN
+      zombie_pigman_spawner:
+        material: SPAWNER
+        buy-price: 10000
+        sell-price: 4000
+        slot: 2
+        spawner-type: ZOMBIFIED_PIGLIN
+      husk_spawner:
+        material: SPAWNER
+        buy-price: 6000
+        sell-price: 2400
+        slot: 3
+        spawner-type: HUSK
+      stray_spawner:
+        material: SPAWNER
+        buy-price: 6000
+        sell-price: 2400
+        slot: 4
+        spawner-type: STRAY
+      drowned_spawner:
+        material: SPAWNER
+        buy-price: 8000
+        sell-price: 3200
+        slot: 5
+        spawner-type: DROWNED
+      phantom_spawner:
+        material: SPAWNER
+        buy-price: 10000
+        sell-price: 4000
+        slot: 6
+        spawner-type: PHANTOM
+      pillager_spawner:
+        material: SPAWNER
+        buy-price: 12000
+        sell-price: 5000
+        slot: 7
+        spawner-type: PILLAGER
+
+  premium_spawners:
+    display-name: "&cPremium Spawners"
+    enabled: true
+    icon:
+      material: SPAWNER
+      name: "&cPremium Spawners"
+    items:
+      blaze_spawner:
+        material: SPAWNER
+        buy-price: 25000
+        sell-price: 10000
+        slot: 0
+        spawner-type: BLAZE
+      wither_skeleton_spawner:
+        material: SPAWNER
+        buy-price: 30000
+        sell-price: 12000
+        slot: 1
+        spawner-type: WITHER_SKELETON
+      magma_cube_spawner:
+        material: SPAWNER
+        buy-price: 18000
+        sell-price: 7200
+        slot: 2
+        spawner-type: MAGMA_CUBE
+      guardian_spawner:
+        material: SPAWNER
+        buy-price: 20000
+        sell-price: 8000
+        slot: 3
+        spawner-type: GUARDIAN
+      elder_guardian_spawner:
+        material: SPAWNER
+        buy-price: 50000
+        sell-price: 20000
+        slot: 4
+        spawner-type: ELDER_GUARDIAN
+      hoglin_spawner:
+        material: SPAWNER
+        buy-price: 15000
+        sell-price: 6000
+        slot: 5
+        spawner-type: HOGLIN
+      piglin_brute_spawner:
+        material: SPAWNER
+        buy-price: 20000
+        sell-price: 8000
+        slot: 6
+        spawner-type: PIGLIN_BRUTE
+      shulker_spawner:
+        material: SPAWNER
+        buy-price: 35000
+        sell-price: 14000
+        slot: 7
+        spawner-type: SHULKER
+
+  animal_spawners:
+    display-name: "&aPasture Spawners"
+    enabled: true
+    icon:
+      material: SPAWNER
+      name: "&aPasture Spawners"
+    items:
+      cow_spawner:
+        material: SPAWNER
+        buy-price: 3000
+        sell-price: 1200
+        slot: 0
+        spawner-type: COW
+      pig_spawner:
+        material: SPAWNER
+        buy-price: 3000
+        sell-price: 1200
+        slot: 1
+        spawner-type: PIG
+      sheep_spawner:
+        material: SPAWNER
+        buy-price: 3000
+        sell-price: 1200
+        slot: 2
+        spawner-type: SHEEP
+      chicken_spawner:
+        material: SPAWNER
+        buy-price: 2500
+        sell-price: 1000
+        slot: 3
+        spawner-type: CHICKEN
+      rabbit_spawner:
+        material: SPAWNER
+        buy-price: 3000
+        sell-price: 1200
+        slot: 4
+        spawner-type: RABBIT
+      horse_spawner:
+        material: SPAWNER
+        buy-price: 5000
+        sell-price: 2000
+        slot: 5
+        spawner-type: HORSE
+      squid_spawner:
+        material: SPAWNER
+        buy-price: 4000
+        sell-price: 1600
+        slot: 6
+        spawner-type: SQUID
+      glow_squid_spawner:
+        material: SPAWNER
+        buy-price: 5000
+        sell-price: 2000
+        slot: 7
+        spawner-type: GLOW_SQUID
+      turtle_spawner:
+        material: SPAWNER
+        buy-price: 4000
+        sell-price: 1600
+        slot: 8
+        spawner-type: TURTLE
+      axolotl_spawner:
+        material: SPAWNER
+        buy-price: 5000
+        sell-price: 2000
+        slot: 9
+        spawner-type: AXOLOTL

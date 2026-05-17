@@ -1,0 +1,107 @@
+# ── Buy Transaction Screen GUI ────────────────────────────────────────────────
+# Shown when a player left-clicks an item to buy it.
+# Lets them choose a quantity before confirming the purchase.
+
+# {item} = item display name
+title: "<green><bold>Buy {item}"
+
+rows: 4
+
+border:
+  enabled: true
+  material: GREEN_STAINED_GLASS_PANE
+  name: " "
+
+background:
+  material: GRAY_STAINED_GLASS_PANE
+  name: " "
+
+# Item preview — shows what the player is buying (center-ish)
+preview-slot: 13
+
+# Price display item
+price-display:
+  slot: 11
+  material: SUNFLOWER
+  name: "<gold><bold>Price Info"
+  lore:
+    - "<gray>Buy price: <green>{buy-price} {currency}</green>"
+    - "<gray>Quantity:   <white>x{amount}</white>"
+    - "<gray>Total:      <gold>{total} {currency}</gold>"
+    - ""
+    - "<gray>Balance: <green>{balance} {currency}</green>"
+    - "<gray>Remaining: <green>{remaining} {currency}</green>"
+
+# Quantity buttons (fixed slots)
+quantities:
+  - slot: 18
+    amount: 1
+    material: WHITE_STAINED_GLASS_PANE
+    name: "<white>x1"
+
+  - slot: 19
+    amount: 8
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    name: "<aqua>x8"
+
+  - slot: 20
+    amount: 16
+    material: CYAN_STAINED_GLASS_PANE
+    name: "<aqua>x16"
+
+  - slot: 21
+    amount: 32
+    material: BLUE_STAINED_GLASS_PANE
+    name: "<blue>x32"
+
+  - slot: 22
+    amount: 64
+    material: PURPLE_STAINED_GLASS_PANE
+    name: "<dark_purple>x64"
+
+  # Max affordable: calculated dynamically
+  - slot: 23
+    amount: MAX
+    material: LIME_STAINED_GLASS_PANE
+    name: "<green>Max (<white>{max}</white>)"
+    lore:
+      - "<gray>Buy as many as you can afford."
+
+  # Custom amount: opens anvil/chat input
+  - slot: 24
+    amount: CUSTOM
+    material: WRITABLE_BOOK
+    name: "<yellow>Custom Amount"
+    lore:
+      - "<gray>Click to enter a custom amount."
+
+# Confirm button
+confirm:
+  slot: 15
+  material: LIME_CONCRETE
+  name: "<green><bold>✔ Confirm Purchase"
+  lore:
+    - "<gray>Click to buy <white>x{amount} {item}</white>"
+    - "<gray>for <gold>{total} {currency}</gold>."
+
+# Cancel button
+cancel:
+  slot: 17
+  material: RED_CONCRETE
+  name: "<red><bold>✘ Cancel"
+  lore:
+    - "<gray>Go back without buying."
+
+# Back button
+back:
+  slot: 31
+  material: ARROW
+  name: "<gray>◁ Back"
+  lore:
+    - "<gray>Return to the shop."
+  action: BACK
+
+# Selected quantity glows
+selection-glow: true
+# The currently selected quantity's pane glows vs others are dimmed
+dimmed-material: GRAY_STAINED_GLASS_PANE

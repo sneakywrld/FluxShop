@@ -1,0 +1,380 @@
+id: survival_mining
+display-name: "&7Mining"
+enabled: true
+display-slot: 21
+display-item:
+  material: TNT
+  name: "&7⛏ &fMining"
+  lore:
+    - "&8TNT, rails, redstone components and more"
+
+categories:
+  explosives:
+    display-name: "&cExplosives & Light"
+    enabled: true
+    icon:
+      material: TNT
+      name: "&cExplosives & Light"
+    items:
+      tnt:
+        material: TNT
+        buy-price: 50
+        sell-price: 20
+        slot: 0
+      tnt_minecart:
+        material: TNT_MINECART
+        buy-price: 80
+        sell-price: 30
+        slot: 1
+      fire_charge:
+        material: FIRE_CHARGE
+        buy-price: 20
+        sell-price: 8
+        slot: 2
+      end_crystal:
+        material: END_CRYSTAL
+        buy-price: 800
+        sell-price: 300
+        slot: 3
+      torch:
+        material: TORCH
+        buy-price: 1
+        sell-price: 0.5
+        slot: 9
+      soul_torch:
+        material: SOUL_TORCH
+        buy-price: 2
+        sell-price: 1
+        slot: 10
+      lantern:
+        material: LANTERN
+        buy-price: 10
+        sell-price: 4
+        slot: 11
+      soul_lantern:
+        material: SOUL_LANTERN
+        buy-price: 12
+        sell-price: 5
+        slot: 12
+      glowstone:
+        material: GLOWSTONE
+        buy-price: 20
+        sell-price: 8
+        slot: 13
+      shroomlight:
+        material: SHROOMLIGHT
+        buy-price: 25
+        sell-price: 10
+        slot: 14
+      sea_lantern:
+        material: SEA_LANTERN
+        buy-price: 30
+        sell-price: 12
+        slot: 15
+      glow_item_frame:
+        material: GLOW_ITEM_FRAME
+        buy-price: 15
+        sell-price: 6
+        slot: 16
+
+  rails:
+    display-name: "&eRails & Minecarts"
+    enabled: true
+    icon:
+      material: RAIL
+      name: "&eRails & Minecarts"
+    items:
+      rail:
+        material: RAIL
+        buy-price: 5
+        sell-price: 2
+        slot: 0
+      powered_rail:
+        material: POWERED_RAIL
+        buy-price: 30
+        sell-price: 12
+        slot: 1
+      detector_rail:
+        material: DETECTOR_RAIL
+        buy-price: 25
+        sell-price: 10
+        slot: 2
+      activator_rail:
+        material: ACTIVATOR_RAIL
+        buy-price: 25
+        sell-price: 10
+        slot: 3
+      minecart:
+        material: MINECART
+        buy-price: 40
+        sell-price: 16
+        slot: 4
+      chest_minecart:
+        material: CHEST_MINECART
+        buy-price: 80
+        sell-price: 30
+        slot: 5
+      furnace_minecart:
+        material: FURNACE_MINECART
+        buy-price: 80
+        sell-price: 30
+        slot: 6
+      hopper_minecart:
+        material: HOPPER_MINECART
+        buy-price: 120
+        sell-price: 48
+        slot: 7
+
+  redstone:
+    display-name: "&cRedstone Components"
+    enabled: true
+    icon:
+      material: REDSTONE
+      name: "&cRedstone Components"
+    items:
+      redstone:
+        material: REDSTONE
+        buy-price: 15
+        sell-price: 6
+        slot: 0
+      redstone_block:
+        material: REDSTONE_BLOCK
+        buy-price: 120
+        sell-price: 50
+        slot: 1
+      redstone_torch:
+        material: REDSTONE_TORCH
+        buy-price: 5
+        sell-price: 2
+        slot: 2
+      redstone_lamp:
+        material: REDSTONE_LAMP
+        buy-price: 25
+        sell-price: 10
+        slot: 3
+      repeater:
+        material: REPEATER
+        buy-price: 10
+        sell-price: 4
+        slot: 4
+      comparator:
+        material: COMPARATOR
+        buy-price: 20
+        sell-price: 8
+        slot: 5
+      lever:
+        material: LEVER
+        buy-price: 3
+        sell-price: 1
+        slot: 6
+      stone_button:
+        material: STONE_BUTTON
+        buy-price: 3
+        sell-price: 1
+        slot: 7
+      stone_pressure_plate:
+        material: STONE_PRESSURE_PLATE
+        buy-price: 5
+        sell-price: 2
+        slot: 8
+      tripwire_hook:
+        material: TRIPWIRE_HOOK
+        buy-price: 8
+        sell-price: 3
+        slot: 9
+      target:
+        material: TARGET
+        buy-price: 20
+        sell-price: 8
+        slot: 10
+      daylight_detector:
+        material: DAYLIGHT_DETECTOR
+        buy-price: 30
+        sell-price: 12
+        slot: 11
+      lightning_rod:
+        material: LIGHTNING_ROD
+        buy-price: 60
+        sell-price: 25
+        slot: 12
+
+  utility_blocks:
+    display-name: "&7Utility Blocks"
+    enabled: true
+    icon:
+      material: HOPPER
+      name: "&7Utility Blocks"
+    items:
+      ladder:
+        material: LADDER
+        buy-price: 2
+        sell-price: 1
+        slot: 0
+      scaffolding:
+        material: SCAFFOLDING
+        buy-price: 2
+        sell-price: 1
+        slot: 1
+      piston:
+        material: PISTON
+        buy-price: 25
+        sell-price: 10
+        slot: 2
+      sticky_piston:
+        material: STICKY_PISTON
+        buy-price: 35
+        sell-price: 14
+        slot: 3
+      hopper:
+        material: HOPPER
+        buy-price: 100
+        sell-price: 40
+        slot: 4
+      dropper:
+        material: DROPPER
+        buy-price: 30
+        sell-price: 12
+        slot: 5
+      dispenser:
+        material: DISPENSER
+        buy-price: 50
+        sell-price: 20
+        slot: 6
+      observer:
+        material: OBSERVER
+        buy-price: 40
+        sell-price: 16
+        slot: 7
+      chest:
+        material: CHEST
+        buy-price: 20
+        sell-price: 8
+        slot: 8
+      trapped_chest:
+        material: TRAPPED_CHEST
+        buy-price: 25
+        sell-price: 10
+        slot: 9
+      barrel:
+        material: BARREL
+        buy-price: 30
+        sell-price: 12
+        slot: 10
+      shulker_box:
+        material: SHULKER_BOX
+        buy-price: 400
+        sell-price: 160
+        slot: 11
+      furnace:
+        material: FURNACE
+        buy-price: 20
+        sell-price: 8
+        slot: 12
+      blast_furnace:
+        material: BLAST_FURNACE
+        buy-price: 80
+        sell-price: 30
+        slot: 13
+      smoker:
+        material: SMOKER
+        buy-price: 50
+        sell-price: 20
+        slot: 14
+      crafting_table:
+        material: CRAFTING_TABLE
+        buy-price: 15
+        sell-price: 6
+        slot: 15
+      stonecutter:
+        material: STONECUTTER
+        buy-price: 30
+        sell-price: 12
+        slot: 16
+      loom:
+        material: LOOM
+        buy-price: 25
+        sell-price: 10
+        slot: 17
+      smithing_table:
+        material: SMITHING_TABLE
+        buy-price: 40
+        sell-price: 16
+        slot: 18
+      cartography_table:
+        material: CARTOGRAPHY_TABLE
+        buy-price: 30
+        sell-price: 12
+        slot: 19
+      fletching_table:
+        material: FLETCHING_TABLE
+        buy-price: 30
+        sell-price: 12
+        slot: 20
+
+  decoration:
+    display-name: "&bDecoration Blocks"
+    enabled: true
+    icon:
+      material: ITEM_FRAME
+      name: "&bDecoration Blocks"
+    items:
+      item_frame:
+        material: ITEM_FRAME
+        buy-price: 10
+        sell-price: 4
+        slot: 0
+      painting:
+        material: PAINTING
+        buy-price: 10
+        sell-price: 4
+        slot: 1
+      armor_stand:
+        material: ARMOR_STAND
+        buy-price: 20
+        sell-price: 8
+        slot: 2
+      bell:
+        material: BELL
+        buy-price: 100
+        sell-price: 40
+        slot: 3
+      flower_pot:
+        material: FLOWER_POT
+        buy-price: 5
+        sell-price: 2
+        slot: 4
+      bookshelf:
+        material: BOOKSHELF
+        buy-price: 30
+        sell-price: 12
+        slot: 5
+      chiseled_bookshelf:
+        material: CHISELED_BOOKSHELF
+        buy-price: 40
+        sell-price: 16
+        slot: 6
+      lectern:
+        material: LECTERN
+        buy-price: 50
+        sell-price: 20
+        slot: 7
+      jukebox:
+        material: JUKEBOX
+        buy-price: 600
+        sell-price: 250
+        slot: 8
+      note_block:
+        material: NOTE_BLOCK
+        buy-price: 20
+        sell-price: 8
+        slot: 9
+      sea_pickle:
+        material: SEA_PICKLE
+        buy-price: 8
+        sell-price: 3
+        slot: 10
+      conduit:
+        material: CONDUIT
+        buy-price: 2000
+        sell-price: 800
+        slot: 11

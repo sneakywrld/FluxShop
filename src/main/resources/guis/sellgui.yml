@@ -1,0 +1,81 @@
+# ── SellGUI — Drag-and-Drop Sell Interface ────────────────────────────────────
+# Players open this via /sellgui and drop items in to sell them instantly.
+# Items with no sell value cannot be dropped in.
+
+title: "<gold><bold>⬇ Sell Items — Drag & Drop"
+
+rows: 6
+
+# The "drop zone" where players place items to sell
+# All slots NOT in the reserved list below are drop zones
+drop-zone-rows: [ 0, 1, 2, 3 ]  # rows 0–3 (slots 0–35)
+
+# Reserved bottom row (row 4 & 5) for controls
+border:
+  enabled: true
+  material: YELLOW_STAINED_GLASS_PANE
+  name: " "
+  # Only border rows 4–5 (the control area); rows 0–3 stay empty for items
+  rows: [ 4, 5 ]
+
+background:
+  material: AIR  # drop zone is clear
+  name: " "
+
+# Live total display — updates as items are added/removed
+total-display:
+  slot: 49
+  material: SUNFLOWER
+  name: "<gold><bold>Total: <green>{total} {currency}</green>"
+  lore:
+    - "<gray>Drop items above to sell them."
+    - "<gray>Remove items to take them back."
+    - ""
+    - "<gray>Items sold: <white>{item-count}</white>"
+    - "<gray>Value: <gold>{total} {currency}</gold>"
+
+# Sell All button — sells everything currently in the drop zone
+sell-all:
+  slot: 51
+  material: LIME_CONCRETE
+  name: "<green><bold>✔ Sell All"
+  lore:
+    - "<gray>Click to sell all items above."
+    - "<gray>Total: <gold>{total} {currency}</gold>"
+  action: SELL_ALL
+
+# Return All button — returns all items to inventory
+return-all:
+  slot: 47
+  material: RED_CONCRETE
+  name: "<red><bold>✘ Return All"
+  lore:
+    - "<gray>Return all items to your inventory."
+  action: RETURN_ALL
+
+# Close button
+close:
+  slot: 45
+  material: BARRIER
+  name: "<red>Close"
+  lore:
+    - "<gray>Items will be returned to inventory."
+  action: CLOSE_RETURN
+
+# Info panel
+info:
+  slot: 53
+  material: BOOK
+  name: "<white><bold>How to use"
+  lore:
+    - "<gray>1. Drag items from your inventory"
+    - "<gray>   into the top area."
+    - "<gray>2. Check the total value."
+    - "<gray>3. Click <green>Sell All</green> to confirm."
+    - ""
+    - "<yellow>Items with no sell value"
+    - "<yellow>will be highlighted in red."
+
+# Highlight items with no sell value using a red particle or name suffix
+highlight-unsellable: true
+unsellable-name-suffix: " <red>[No value]"

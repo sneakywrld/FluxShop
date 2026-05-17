@@ -1,0 +1,227 @@
+id: survival_end
+display-name: "&5The End"
+enabled: true
+display-slot: 24
+display-item:
+  material: END_STONE
+  name: "&5☆ &fThe End"
+  lore:
+    - "&8Blocks and loot from The End"
+
+categories:
+  end_blocks:
+    display-name: "&5End Stone & Purpur"
+    enabled: true
+    icon:
+      material: PURPUR_BLOCK
+      name: "&5End Stone & Purpur"
+    items:
+      end_stone:
+        material: END_STONE
+        buy-price: 5
+        sell-price: 2
+        slot: 0
+      end_stone_bricks:
+        material: END_STONE_BRICKS
+        buy-price: 8
+        sell-price: 3
+        slot: 1
+      purpur_block:
+        material: PURPUR_BLOCK
+        buy-price: 10
+        sell-price: 4
+        slot: 2
+      purpur_pillar:
+        material: PURPUR_PILLAR
+        buy-price: 10
+        sell-price: 4
+        slot: 3
+      purpur_stairs:
+        material: PURPUR_STAIRS
+        buy-price: 8
+        sell-price: 3
+        slot: 4
+      purpur_slab:
+        material: PURPUR_SLAB
+        buy-price: 5
+        sell-price: 2
+        slot: 5
+      obsidian:
+        material: OBSIDIAN
+        buy-price: 15
+        sell-price: 6
+        slot: 6
+      crying_obsidian:
+        material: CRYING_OBSIDIAN
+        buy-price: 30
+        sell-price: 12
+        slot: 7
+      end_rod:
+        material: END_ROD
+        buy-price: 15
+        sell-price: 6
+        slot: 8
+
+  chorus:
+    display-name: "&dChorus Plants"
+    enabled: true
+    icon:
+      material: CHORUS_FLOWER
+      name: "&dChorus Plants"
+    items:
+      chorus_flower:
+        material: CHORUS_FLOWER
+        buy-price: 20
+        sell-price: 8
+        slot: 0
+      chorus_fruit:
+        material: CHORUS_FRUIT
+        buy-price: 20
+        sell-price: 8
+        slot: 1
+      popped_chorus_fruit:
+        material: POPPED_CHORUS_FRUIT
+        buy-price: 15
+        sell-price: 6
+        slot: 2
+      chorus_plant:
+        material: CHORUS_PLANT
+        buy-price: 8
+        sell-price: 3
+        slot: 3
+
+  end_loot:
+    display-name: "&eEnd Loot"
+    enabled: true
+    icon:
+      material: SHULKER_SHELL
+      name: "&eEnd Loot"
+    items:
+      shulker_shell:
+        material: SHULKER_SHELL
+        buy-price: 200
+        sell-price: 80
+        slot: 0
+      ender_pearl:
+        material: ENDER_PEARL
+        buy-price: 40
+        sell-price: 18
+        slot: 1
+      eye_of_ender:
+        material: ENDER_EYE
+        buy-price: 80
+        sell-price: 35
+        slot: 2
+      dragon_breath:
+        material: DRAGON_BREATH
+        buy-price: 200
+        sell-price: 80
+        slot: 3
+      end_crystal:
+        material: END_CRYSTAL
+        buy-price: 800
+        sell-price: 300
+        slot: 4
+      elytra:
+        material: ELYTRA
+        buy-price: 10000
+        sell-price: 4000
+        slot: 5
+      dragon_head:
+        material: DRAGON_HEAD
+        buy-price: 5000
+        sell-price: 2000
+        slot: 6
+
+  shulker_boxes:
+    display-name: "&bShulker Boxes"
+    enabled: true
+    icon:
+      material: SHULKER_BOX
+      name: "&bShulker Boxes"
+    items:
+      shulker_box:
+        material: SHULKER_BOX
+        buy-price: 400
+        sell-price: 160
+        slot: 0
+      white_shulker_box:
+        material: WHITE_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 1
+      orange_shulker_box:
+        material: ORANGE_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 2
+      magenta_shulker_box:
+        material: MAGENTA_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 3
+      light_blue_shulker_box:
+        material: LIGHT_BLUE_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 4
+      yellow_shulker_box:
+        material: YELLOW_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 5
+      lime_shulker_box:
+        material: LIME_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 6
+      pink_shulker_box:
+        material: PINK_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 7
+      gray_shulker_box:
+        material: GRAY_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 8
+      light_gray_shulker_box:
+        material: LIGHT_GRAY_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 9
+      cyan_shulker_box:
+        material: CYAN_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 10
+      purple_shulker_box:
+        material: PURPLE_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 11
+      blue_shulker_box:
+        material: BLUE_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 12
+      brown_shulker_box:
+        material: BROWN_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 13
+      green_shulker_box:
+        material: GREEN_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 14
+      red_shulker_box:
+        material: RED_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 15
+      black_shulker_box:
+        material: BLACK_SHULKER_BOX
+        buy-price: 420
+        sell-price: 170
+        slot: 16

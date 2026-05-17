@@ -1,0 +1,272 @@
+id: survival_nether
+display-name: "&cNether"
+enabled: true
+display-slot: 23
+display-item:
+  material: NETHERRACK
+  name: "&c🔥 &fNether"
+  lore:
+    - "&8Blocks and loot from the Nether"
+
+categories:
+  nether_blocks:
+    display-name: "&cNether Blocks"
+    enabled: true
+    icon:
+      material: NETHERRACK
+      name: "&cNether Blocks"
+    items:
+      netherrack:
+        material: NETHERRACK
+        buy-price: 1
+        sell-price: 0.5
+        slot: 0
+      soul_sand:
+        material: SOUL_SAND
+        buy-price: 5
+        sell-price: 2
+        slot: 1
+      soul_soil:
+        material: SOUL_SOIL
+        buy-price: 5
+        sell-price: 2
+        slot: 2
+      nether_bricks:
+        material: NETHER_BRICKS
+        buy-price: 6
+        sell-price: 2
+        slot: 3
+      red_nether_bricks:
+        material: RED_NETHER_BRICKS
+        buy-price: 8
+        sell-price: 3
+        slot: 4
+      cracked_nether_bricks:
+        material: CRACKED_NETHER_BRICKS
+        buy-price: 6
+        sell-price: 2
+        slot: 5
+      chiseled_nether_bricks:
+        material: CHISELED_NETHER_BRICKS
+        buy-price: 8
+        sell-price: 3
+        slot: 6
+      nether_brick_fence:
+        material: NETHER_BRICK_FENCE
+        buy-price: 4
+        sell-price: 1
+        slot: 7
+      nether_quartz_ore:
+        material: NETHER_QUARTZ_ORE
+        buy-price: 15
+        sell-price: 6
+        slot: 8
+      nether_gold_ore:
+        material: NETHER_GOLD_ORE
+        buy-price: 30
+        sell-price: 12
+        slot: 9
+      magma_block:
+        material: MAGMA_BLOCK
+        buy-price: 8
+        sell-price: 3
+        slot: 10
+      glowstone:
+        material: GLOWSTONE
+        buy-price: 20
+        sell-price: 8
+        slot: 11
+      glowstone_dust:
+        material: GLOWSTONE_DUST
+        buy-price: 8
+        sell-price: 3
+        slot: 12
+
+  basalt_blackstone:
+    display-name: "&8Basalt & Blackstone"
+    enabled: true
+    icon:
+      material: BLACKSTONE
+      name: "&8Basalt & Blackstone"
+    items:
+      basalt:
+        material: BASALT
+        buy-price: 3
+        sell-price: 1
+        slot: 0
+      smooth_basalt:
+        material: SMOOTH_BASALT
+        buy-price: 4
+        sell-price: 1
+        slot: 1
+      polished_basalt:
+        material: POLISHED_BASALT
+        buy-price: 4
+        sell-price: 1
+        slot: 2
+      blackstone:
+        material: BLACKSTONE
+        buy-price: 3
+        sell-price: 1
+        slot: 3
+      polished_blackstone:
+        material: POLISHED_BLACKSTONE
+        buy-price: 5
+        sell-price: 2
+        slot: 4
+      chiseled_polished_blackstone:
+        material: CHISELED_POLISHED_BLACKSTONE
+        buy-price: 8
+        sell-price: 3
+        slot: 5
+      polished_blackstone_bricks:
+        material: POLISHED_BLACKSTONE_BRICKS
+        buy-price: 8
+        sell-price: 3
+        slot: 6
+      gilded_blackstone:
+        material: GILDED_BLACKSTONE
+        buy-price: 25
+        sell-price: 10
+        slot: 7
+
+  crimson_warped:
+    display-name: "&dCrimson & Warped"
+    enabled: true
+    icon:
+      material: CRIMSON_STEM
+      name: "&dCrimson & Warped"
+    items:
+      crimson_stem:
+        material: CRIMSON_STEM
+        buy-price: 8
+        sell-price: 3
+        slot: 0
+      warped_stem:
+        material: WARPED_STEM
+        buy-price: 8
+        sell-price: 3
+        slot: 1
+      crimson_planks:
+        material: CRIMSON_PLANKS
+        buy-price: 3
+        sell-price: 1
+        slot: 2
+      warped_planks:
+        material: WARPED_PLANKS
+        buy-price: 3
+        sell-price: 1
+        slot: 3
+      crimson_nylium:
+        material: CRIMSON_NYLIUM
+        buy-price: 5
+        sell-price: 2
+        slot: 4
+      warped_nylium:
+        material: WARPED_NYLIUM
+        buy-price: 5
+        sell-price: 2
+        slot: 5
+      nether_wart_block:
+        material: NETHER_WART_BLOCK
+        buy-price: 6
+        sell-price: 2
+        slot: 6
+      warped_wart_block:
+        material: WARPED_WART_BLOCK
+        buy-price: 6
+        sell-price: 2
+        slot: 7
+      shroomlight:
+        material: SHROOMLIGHT
+        buy-price: 25
+        sell-price: 10
+        slot: 8
+      crimson_roots:
+        material: CRIMSON_ROOTS
+        buy-price: 3
+        sell-price: 1
+        slot: 9
+      warped_roots:
+        material: WARPED_ROOTS
+        buy-price: 3
+        sell-price: 1
+        slot: 10
+      weeping_vines:
+        material: WEEPING_VINES
+        buy-price: 2
+        sell-price: 1
+        slot: 11
+      twisting_vines:
+        material: TWISTING_VINES
+        buy-price: 2
+        sell-price: 1
+        slot: 12
+
+  nether_resources:
+    display-name: "&6Nether Resources"
+    enabled: true
+    icon:
+      material: NETHER_WART
+      name: "&6Nether Resources"
+    items:
+      nether_wart:
+        material: NETHER_WART
+        buy-price: 20
+        sell-price: 8
+        slot: 0
+      quartz:
+        material: QUARTZ
+        buy-price: 25
+        sell-price: 10
+        slot: 1
+      quartz_block:
+        material: QUARTZ_BLOCK
+        buy-price: 90
+        sell-price: 36
+        slot: 2
+      smooth_quartz:
+        material: SMOOTH_QUARTZ
+        buy-price: 100
+        sell-price: 40
+        slot: 3
+      chiseled_quartz_block:
+        material: CHISELED_QUARTZ_BLOCK
+        buy-price: 100
+        sell-price: 40
+        slot: 4
+      quartz_pillar:
+        material: QUARTZ_PILLAR
+        buy-price: 100
+        sell-price: 40
+        slot: 5
+      ancient_debris:
+        material: ANCIENT_DEBRIS
+        buy-price: 3500
+        sell-price: 1500
+        slot: 6
+      netherite_scrap:
+        material: NETHERITE_SCRAP
+        buy-price: 800
+        sell-price: 350
+        slot: 7
+      netherite_ingot:
+        material: NETHERITE_INGOT
+        buy-price: 5000
+        sell-price: 2200
+        slot: 8
+      blaze_rod:
+        material: BLAZE_ROD
+        buy-price: 60
+        sell-price: 25
+        slot: 9
+      ghast_tear:
+        material: GHAST_TEAR
+        buy-price: 80
+        sell-price: 35
+        slot: 10
+      magma_cream:
+        material: MAGMA_CREAM
+        buy-price: 40
+        sell-price: 16
+        slot: 11

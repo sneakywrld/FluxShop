@@ -1,0 +1,146 @@
+# ── Admin Analytics Dashboard GUI ────────────────────────────────────────────
+# A read-only dashboard showing economy statistics.
+# Accessible via /fluxshop analytics (requires fluxshop.admin.analytics)
+
+title: "<dark_aqua><bold>📊 Shop Analytics"
+
+rows: 6
+
+border:
+  enabled: true
+  material: BLUE_STAINED_GLASS_PANE
+  name: " "
+
+background:
+  material: GRAY_STAINED_GLASS_PANE
+  name: " "
+
+# ── Panel Slots ──────────────────────────────────────────────────────────────
+
+# Top bought items (column 1)
+top-bought:
+  slot: 10
+  material: DIAMOND
+  name: "<aqua><bold>Top Bought Items"
+  lore-header: "<gray>Most purchased (last {window}h):"
+  lore-line: "<gray>  {rank}. {item} — <white>x{count}</white>"
+  lore-empty: "<gray>  No data yet."
+  max-entries: 10
+
+# Top sold items (column 2)
+top-sold:
+  slot: 11
+  material: GOLD_INGOT
+  name: "<gold><bold>Top Sold Items"
+  lore-header: "<gray>Most sold (last {window}h):"
+  lore-line: "<gray>  {rank}. {item} — <white>x{count}</white>"
+  lore-empty: "<gray>  No data yet."
+  max-entries: 10
+
+# Total revenue
+revenue:
+  slot: 13
+  material: SUNFLOWER
+  name: "<yellow><bold>Total Revenue"
+  lore:
+    - "<gray>Last {window}h: <gold>{revenue-24h} {currency}</gold>"
+    - "<gray>Last 7d: <gold>{revenue-7d} {currency}</gold>"
+    - "<gray>All time: <gold>{revenue-all} {currency}</gold>"
+
+# Active buyers
+active-buyers:
+  slot: 15
+  material: PLAYER_HEAD
+  skull-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzI0ZTY3OTZlYzFhODRkZGMzM2M5MjY5ZWI4NDRmODI4NzMzZmRkOGY3YzZhYTZlNGZmZGY4YWZiZjY5In19fQ"
+  name: "<green><bold>Active Buyers"
+  lore:
+    - "<gray>Last {window}h: <white>{buyers-24h}</white>"
+    - "<gray>Last 7d: <white>{buyers-7d}</white>"
+    - "<gray>Top buyer: <aqua>{top-buyer}</aqua>"
+
+# Economy health score
+health:
+  slot: 22
+  material: HEART_OF_THE_SEA
+  name: "<red><bold>Economy Health"
+  lore:
+    - "<gray>Buy/sell ratio: <white>{ratio}</white>"
+    - "<gray>Score: {health-bar}"
+    - ""
+    - "<gray>A healthy economy has a ratio"
+    - "<gray>close to 1.0 (buys ≈ sells)."
+
+# Transaction volume chart (ASCII bar via lore)
+volume-chart:
+  slot: 20
+  material: MAP
+  name: "<white><bold>Transaction Volume"
+  lore-header: "<gray>Hourly volume (last 12h):"
+  bar-full: "<green>█"
+  bar-empty: "<dark_gray>░"
+  bar-width: 16
+
+# Stock alerts
+stock-alerts:
+  slot: 24
+  material: ORANGE_CONCRETE
+  name: "<gold><bold>⚠ Stock Alerts"
+  lore-header: "<gray>Out-of-stock items:"
+  lore-line: "<gray>  • {shop}/{item}"
+  lore-empty: "<green>  All items in stock!"
+
+# Average transaction value
+avg-value:
+  slot: 19
+  material: EMERALD
+  name: "<green><bold>Avg Transaction"
+  lore:
+    - "<gray>Last {window}h: <gold>{avg-24h} {currency}</gold>"
+    - "<gray>Last 7d: <gold>{avg-7d} {currency}</gold>"
+
+# Total transactions count
+tx-count:
+  slot: 25
+  material: BOOK
+  name: "<white><bold>Transactions"
+  lore:
+    - "<gray>Last {window}h: <white>{tx-24h}</white>"
+    - "<gray>Last 7d: <white>{tx-7d}</white>"
+    - "<gray>All time: <white>{tx-all}</white>"
+
+# Time filter toggle
+time-filter:
+  slot: 49
+  material: CLOCK
+  name: "<white>Time Window"
+  lore:
+    - "<gray>Current: <white>{window}h</white>"
+    - ""
+    - "<gray>Click to cycle: 24h → 48h → 7d → 30d"
+  action: CYCLE_WINDOW
+
+# Refresh button
+refresh:
+  slot: 51
+  material: NETHER_STAR
+  name: "<aqua>Refresh Data"
+  lore:
+    - "<gray>Reload analytics from database."
+  action: REFRESH
+
+# Export CSV button
+export:
+  slot: 53
+  material: WRITABLE_BOOK
+  name: "<yellow>Export CSV"
+  lore:
+    - "<gray>Export analytics to a CSV file"
+    - "<gray>in the plugin data folder."
+  action: EXPORT
+
+# Back / close button
+close:
+  slot: 45
+  material: BARRIER
+  name: "<red>Close"
+  action: CLOSE

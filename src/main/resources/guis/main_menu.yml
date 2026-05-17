@@ -1,0 +1,92 @@
+# ── Main Shop Menu GUI ────────────────────────────────────────────────────────
+# This is the first screen players see when typing /shop.
+# It displays all shop categories as clickable icons.
+
+title: "<bold><gradient:#FFD700:#FFA500>✦ FluxShop ✦</gradient></bold>"
+
+# Inventory size (rows × 9). Valid: 9, 18, 27, 36, 45, 54
+rows: 6
+
+# Border fill — decorative glass panes around the edge
+border:
+  enabled: true
+  material: BLACK_STAINED_GLASS_PANE
+  name: " "
+
+# Background fill for all empty slots (set material to AIR to disable)
+background:
+  material: GRAY_STAINED_GLASS_PANE
+  name: " "
+
+# Animation: cycle through border materials over time
+animated-border:
+  enabled: true
+  # Each frame is shown for this many ticks (20 ticks = 1 second)
+  interval-ticks: 10
+  frames:
+    - BLACK_STAINED_GLASS_PANE
+    - GRAY_STAINED_GLASS_PANE
+    - BLACK_STAINED_GLASS_PANE
+
+# Navigation / decoration items in fixed slots
+# Slots are 0-indexed, row-major (row 0, slot 0 = top-left)
+decorations:
+  # Divider bar across row 5 (bottom row), slots 0-8
+  divider:
+    slots: [ 45, 46, 47, 48, 49, 50, 51, 52, 53 ]
+    material: BLACK_STAINED_GLASS_PANE
+    name: " "
+
+  # Close button
+  close:
+    slot: 49
+    material: BARRIER
+    name: "<red><bold>✕ Close"
+    lore:
+      - "<gray>Click to close the shop."
+    action: CLOSE
+
+# Particle effect played when the menu is opened
+open-particle:
+  enabled: true
+  type: VILLAGER_HAPPY
+  count: 10
+
+# Sound played when the menu is opened (see sounds section in config.yml)
+open-sound: shop-open
+
+# Category icons are positioned automatically by the shops themselves,
+# but you can override the layout here.
+# Layout uses slot numbers 0–44 (rows 0–4). Each shop's display slot
+# is configured in the individual shop .yml file.
+layout:
+  # Slots reserved for category icons (used if a shop doesn't specify a slot)
+  available-slots:
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43

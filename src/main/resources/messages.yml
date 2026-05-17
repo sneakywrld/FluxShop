@@ -1,0 +1,152 @@
+# ╔══════════════════════════════════════════════════════════════╗
+# ║                FluxShop  —  messages.yml                    ║
+# ║  Supports MiniMessage format AND legacy & colour codes.     ║
+# ║  PlaceholderAPI placeholders are resolved in all messages.  ║
+# ╚══════════════════════════════════════════════════════════════╝
+# Available colour tags: <red>, <green>, <gold>, <aqua>, <gray>, <white>,
+#   <bold>, <italic>, <underlined>, <strikethrough>, <obfuscated>, <reset>
+#   Gradient: <gradient:#ff0000:#00ff00>text</gradient>
+#   Hex: <color:#RRGGBB>text</color>
+# Legacy codes still work: &a, &b, &c ... &l, &o, &r etc.
+
+prefix: "<gray>[</gray><gold><bold>FluxShop</bold></gold><gray>]</gray> "
+
+# ── General ──────────────────────────────────────────────────────────────────
+general:
+  no-permission:       "<red>You don't have permission to do that."
+  player-only:         "<red>This command can only be run by a player."
+  player-not-found:    "<red>Player <white>{player}</white> was not found."
+  invalid-number:      "<red><white>{input}</white> is not a valid number."
+  invalid-amount:      "<red>Amount must be greater than zero."
+  feature-disabled:    "<red>That feature is currently disabled."
+  world-disabled:      "<red>The shop is not available in this world."
+  gamemode-blocked:    "<red>You cannot use the shop in your current game mode."
+  reload-success:      "<green>FluxShop reloaded successfully in <white>{ms}ms</white>."
+  reload-fail:         "<red>An error occurred while reloading. Check console."
+  internal-error:      "<red>An internal error occurred. Please contact an administrator."
+
+# ── Shop ─────────────────────────────────────────────────────────────────────
+shop:
+  shop-not-found:      "<red>Shop <white>{shop}</white> does not exist."
+  section-not-found:   "<red>Section <white>{section}</white> does not exist."
+  no-access:           "<red>You don't have permission to access this shop."
+  world-restricted:    "<red>This shop is not available in your current world."
+  item-no-access:      "<red>You don't have permission to buy/sell this item."
+  cant-buy:            "<red>This item cannot be bought."
+  cant-sell:           "<red>This item cannot be sold."
+  not-for-sale:        "<red>This item is not sold in any shop."
+  out-of-stock:        "<red>This item is out of stock."
+  stock-limit-reached: "<red>You have reached your purchase limit for this item."
+
+# ── Transactions ─────────────────────────────────────────────────────────────
+transaction:
+  # {amount}, {item}, {price}, {currency} available
+  buy-success:         "<green>You bought <white>x{amount} {item}</white> for <gold>{price} {currency}</gold>."
+  sell-success:        "<green>You sold <white>x{amount} {item}</white> for <gold>{price} {currency}</gold>."
+  buy-fail-funds:      "<red>You don't have enough <white>{currency}</white>. You need <gold>{price}</gold> but have <gold>{balance}</gold>."
+  sell-fail-no-items:  "<red>You don't have any of that item to sell."
+  sell-fail-no-value:  "<red>That item has no sell value."
+  inventory-full:      "<yellow>Your inventory is full — some items were dropped at your feet."
+  cooldown:            "<red>Please wait <white>{seconds}s</white> before your next purchase."
+  confirm-buy:         "<green>Click <white>Confirm</white> to buy <white>x{amount} {item}</white> for <gold>{price} {currency}</gold>."
+  confirm-sell:        "<green>Click <white>Confirm</white> to sell <white>x{amount} {item}</white> for <gold>{price} {currency}</gold>."
+
+# ── Sell All ─────────────────────────────────────────────────────────────────
+sellall:
+  sold:                "<green>Sold <white>{items}</white> items for a total of <gold>{total} {currency}</gold>."
+  nothing-to-sell:     "<yellow>You have no sellable items in your inventory."
+  success:             "<green>Sold <white>{items}</white> item(s) for <gold>{amount}</gold>."
+  summary-header:      "<gray>──── Sell Summary ────"
+  summary-line:        "<gray>  {item} x{amount} → <gold>{price}</gold>"
+  summary-footer:      "<gray>──────────────────────"
+
+# ── Auction House ─────────────────────────────────────────────────────────────
+auction:
+  listed:              "<green>Listed <white>{item}</white> on the Auction House for <gold>{price} {currency}</gold>."
+  listed-success:      "<green>Item listed on the Auction House! Expires in <white>{hours}h</white>."
+  collect-success:     "<green>You collected your items and/or funds from the Auction House."
+  collect-empty:       "<gray>You have nothing to collect from the Auction House."
+  bid-placed:          "<green>You bid <gold>{bid} {currency}</gold> on <white>{item}</white>."
+  seller-bid:          "<green><white>{player}</white> bid <gold>{bid} {currency}</gold> on your listing!"
+  outbid:              "<yellow>You were outbid on <white>{item}</white>! New bid: <gold>{bid} {currency}</gold>."
+  won:                 "<green>You won the auction for <white>{item}</white>! Cost: <gold>{price} {currency}</gold>."
+  sold:                "<green>Your <white>{item}</white> sold for <gold>{price} {currency}</gold>."
+  expired-seller:      "<yellow>Your <white>{item}</white> expired without a buyer and has been returned."
+  expired-bidder:      "<yellow>The auction for <white>{item}</white> you were winning has expired. Your bid has been refunded."
+  collected:           "<green>Collected <white>{item}</white> from the Auction House."
+  collected-currency:  "<green>Collected <gold>{amount} {currency}</gold> from an Auction House sale."
+  no-items-to-collect: "<yellow>You have nothing to collect from the Auction House."
+  pending-collect:     "<yellow>You have uncollected items or funds from the Auction House! Use <white>/auction collect</white>."
+  listing-limit:       "<red>You have reached your maximum listing limit (<white>{max}</white>)."
+  bid-too-low:         "<red>Your bid must be at least <gold>{min} {currency}</gold>."
+  cant-bid-own:        "<red>You cannot bid on your own listing."
+  listing-fee:         "<yellow>A listing fee of <gold>{fee} {currency}</gold> has been charged."
+  no-listings:         "<yellow>There are no active listings on the Auction House."
+
+# ── Trade ─────────────────────────────────────────────────────────────────────
+trade:
+  request-sent:        "<green>Trade request sent to <white>{player}</white>. They have <white>{timeout}s</white> to accept."
+  request-received:    "<yellow><white>{player}</white> wants to trade with you! Type <green>/trade accept</green> or <red>/trade decline</red>."
+  accepted:            "<green>Trade accepted! Opening trade window..."
+  declined:            "<red>{player} declined your trade request."
+  cancelled:           "<yellow>Trade cancelled."
+  cancelled-self:      "<yellow>Trade cancelled."
+  cancelled-other:     "<yellow><white>{player}</white> cancelled the trade."
+  partner-confirmed:   "<green><white>{player}</white> confirmed the trade. Waiting for you..."
+  failed:              "<red>Trade failed: <white>{reason}</white>"
+  request-expired-self:  "<yellow>Your trade request expired."
+  request-expired-other: "<yellow>Trade request from <white>{player}</white> expired."
+  complete:            "<green>Trade completed successfully!"
+  timeout:             "<yellow>Trade request timed out."
+  already-trading:     "<red>You are already in a trade."
+  player-busy:         "<red>{player} is already in a trade."
+  cant-trade-self:     "<red>You cannot trade with yourself."
+  not-ready:           "<yellow>Both players must confirm before the trade completes."
+  cooldown:            "<red>Please wait before sending another trade request."
+  no-request:          "<red>You have no pending trade request."
+
+# ── Black Market ─────────────────────────────────────────────────────────────
+black-market:
+  purchased:           "<dark_purple>You purchased <white>{item}</white> from the Black Market for <gold>{price} {currency}</gold>."
+  out-of-stock:        "<red>That Black Market item is out of stock."
+  limit-reached:       "<red>You have reached your purchase limit for this rotation."
+  rotation-announce:   "<dark_purple><bold>★ The Black Market has a new rotation! ★</bold> Type /blackmarket to browse."
+  rotation-countdown:  "<dark_gray>Next rotation in: <white>{time}</white>"
+  no-permission:       "<red>You don't have access to the Black Market."
+
+# ── Admin ─────────────────────────────────────────────────────────────────────
+admin:
+  price-updated:       "<green>Price updated: <white>{item}</white> {type} price set to <gold>{price}</gold>."
+  modifier-set:        "<green>Price modifier for <white>{player}</white> on <white>{item}</white> set to <gold>{modifier}x</gold>{duration}."
+  modifier-duration:   " for <white>{duration}</white>"
+  restocked:           "<green>Restocked <white>{shop}</white>{item}."
+  restock-item:        " → <white>{item}</white>"
+  given-item:          "<green>Gave <white>{player}</white> x{amount} <white>{item}</white>."
+  imported:            "<green>Imported <white>{count}</white> prices from <white>{source}</white>."
+  exported:            "<green>Shop config exported to <white>{file}</white>."
+  shop-not-found:      "<red>Shop <white>{shop}</white> not found."
+
+# ── Placeholders (used in GUI lore) ──────────────────────────────────────────
+lore:
+  buy-price:           "<gray>Buy: <green>{price} {currency}</green>"
+  sell-price:          "<gray>Sell: <gold>{price} {currency}</gold>"
+  no-buy:              "<gray>Buy: <red>Not available</red>"
+  no-sell:             "<gray>Sell: <red>Not available</red>"
+  stock-global:        "<gray>Stock: <white>{stock}</white>"
+  stock-unlimited:     "<gray>Stock: <white>Unlimited</white>"
+  stock-player:        "<gray>Your limit: <white>{bought}/{max}</white>"
+  permission-required: "<red>Requires: <white>{permission}</white>"
+  discount-applied:    "<green>Discount: <white>{discount}% OFF</white>"
+  multiplier-applied:  "<green>Sell bonus: <white>+{bonus}%</white>"
+  dynamic-price:       "<gray>Dynamic pricing active"
+  seasonal-modifier:   "<gray>Season modifier: <white>{modifier}x</white>"
+  click-buy:           "<aqua>Left-click to buy"
+  click-sell:          "<yellow>Right-click to sell"
+  click-buy-sell:      "<aqua>Left-click: Buy  <yellow>Right-click: Sell"
+  shift-click-max:     "<gray>Shift+click for max quantity"
+  no-permission-item:  "<red>You don't have access to this item"
+
+
+stand:
+  protected:         "<red>This block is a shop stand. You need <white>fluxshop.admin.stand</white> permission to remove it."
+  removed-on-break:  "<green>Shop stand record removed (block broken)."

@@ -1,0 +1,232 @@
+# ── Auction House GUI ─────────────────────────────────────────────────────────
+
+# Main browse screen
+browse:
+  title: "<dark_aqua><bold>⚒ Auction House"
+  rows: 6
+
+  border:
+    enabled: true
+    material: CYAN_STAINED_GLASS_PANE
+    name: " "
+
+  background:
+    material: GRAY_STAINED_GLASS_PANE
+    name: " "
+
+  # Listing display slots (rows 0–3 inner area)
+  item-slots:
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+
+  # Listing lore template
+  listing-lore:
+    - ""
+    - "<gray>Seller: <white>{seller}</white>"
+    - "<gray>Current bid: <gold>{bid} {currency}</gold>"
+    - "<gray>Buy now:  <green>{buy-now} {currency}</green>"
+    - "<gray>Expires: <white>{expires}</white>"
+    - ""
+    - "<aqua>Left-click to bid"
+    - "<green>Right-click to buy now"
+
+  navigation:
+    previous-page:
+      slot: 45
+      material: ARROW
+      name: "<aqua>◀ Previous"
+      lore: [ "<gray>Page {page} of {total}" ]
+      action: PREV_PAGE
+
+    page-info:
+      slot: 49
+      material: PAPER
+      name: "<white>Page <yellow>{page}<white>/<yellow>{total}"
+      lore: [ "<gray>{listings} active listings" ]
+
+    next-page:
+      slot: 53
+      material: ARROW
+      name: "<aqua>Next ▶"
+      lore: [ "<gray>Page {page} of {total}" ]
+      action: NEXT_PAGE
+
+    back:
+      slot: 47
+      material: BARRIER
+      name: "<gray>◁ Back"
+      action: BACK
+
+    my-listings:
+      slot: 46
+      material: CHEST
+      name: "<yellow>My Listings"
+      lore:
+        - "<gray>View your active listings."
+        - "<gray>Active: <white>{my-count}</white>"
+      action: MY_LISTINGS
+
+    collect:
+      slot: 48
+      material: GOLD_INGOT
+      name: "<gold>Collect"
+      lore:
+        - "<gray>Collect sold items or refunds."
+        - "<gray>Pending: <white>{pending}</white>"
+      action: COLLECT
+
+    list-item:
+      slot: 50
+      material: LIME_CONCRETE
+      name: "<green>List Item"
+      lore:
+        - "<gray>Hold an item and click to list it."
+      action: LIST_ITEM
+
+    search:
+      slot: 52
+      material: COMPASS
+      name: "<yellow>Search"
+      lore:
+        - "<gray>Filter listings by name."
+      action: SEARCH
+
+    filter:
+      slot: 51
+      material: HOPPER
+      name: "<white>Filter"
+      lore:
+        - "<gray>Sort by: <white>{sort}</white>"
+        - ""
+        - "<gray>Click to cycle sort mode."
+      action: FILTER
+
+# Bid screen
+bid:
+  title: "<dark_aqua><bold>Place a Bid"
+  rows: 4
+
+  preview-slot: 13
+  info-slot: 11
+  info-material: BOOK
+  info-name: "<gold>Auction Details"
+  info-lore:
+    - "<gray>Item: <white>{item}</white>"
+    - "<gray>Seller: <white>{seller}</white>"
+    - "<gray>Current bid: <gold>{bid} {currency}</gold>"
+    - "<gray>Buy now: <green>{buy-now} {currency}</green>"
+    - "<gray>Expires: <white>{expires}</white>"
+    - ""
+    - "<gray>Min next bid: <gold>{min-bid} {currency}</gold>"
+    - "<gray>Your balance: <green>{balance} {currency}</green>"
+
+  bid-amounts:
+    - slot: 19
+      label: "Min Bid"
+      amount: MIN_BID
+      material: YELLOW_STAINED_GLASS_PANE
+    - slot: 20
+      label: "+10%"
+      amount: PLUS_10_PERCENT
+      material: LIME_STAINED_GLASS_PANE
+    - slot: 21
+      label: "+25%"
+      amount: PLUS_25_PERCENT
+      material: GREEN_STAINED_GLASS_PANE
+    - slot: 22
+      label: "Custom"
+      amount: CUSTOM
+      material: WRITABLE_BOOK
+      name: "<yellow>Custom Bid"
+      lore: [ "<gray>Click to type a custom amount." ]
+
+  confirm:
+    slot: 15
+    material: LIME_CONCRETE
+    name: "<green><bold>✔ Place Bid"
+    lore:
+      - "<gray>Bid <gold>{bid} {currency}</gold> on <white>{item}</white>"
+
+  buy-now:
+    slot: 16
+    material: GOLD_BLOCK
+    name: "<gold><bold>⚡ Buy Now"
+    lore:
+      - "<gray>Instantly buy for <green>{buy-now} {currency}</green>"
+
+  cancel:
+    slot: 17
+    material: RED_CONCRETE
+    name: "<red>Cancel"
+    action: BACK
+
+# List-item screen
+list:
+  title: "<dark_aqua><bold>List on Auction House"
+  rows: 4
+
+  preview-slot: 13
+
+  start-price:
+    slot: 11
+    material: GOLD_INGOT
+    name: "<gold>Starting Price"
+    lore:
+      - "<gray>Current: <gold>{price} {currency}</gold>"
+      - "<gray>Click to set."
+    action: SET_PRICE
+
+  buy-now-price:
+    slot: 12
+    material: EMERALD
+    name: "<green>Buy Now Price"
+    lore:
+      - "<gray>Current: <green>{buy-now} {currency}</green>"
+      - "<gray>Set to 0 to disable."
+    action: SET_BUY_NOW
+
+  duration:
+    slot: 14
+    material: CLOCK
+    name: "<white>Duration"
+    lore:
+      - "<gray>Current: <white>{duration}h</white>"
+      - "<gray>Click to cycle options."
+    action: CYCLE_DURATION
+
+  confirm:
+    slot: 16
+    material: LIME_CONCRETE
+    name: "<green><bold>✔ List Item"
+    lore:
+      - "<gray>List <white>{item}</white>"
+      - "<gray>Starting at <gold>{price} {currency}</gold>"
+      - "<gray>Buy now: <green>{buy-now} {currency}</green>"
+      - "<gray>Duration: <white>{duration}h</white>"
+      - ""
+      - "<gray>Fee: <gold>{fee} {currency}</gold>"
+
+  cancel:
+    slot: 10
+    material: RED_CONCRETE
+    name: "<red>Cancel"
+    action: BACK

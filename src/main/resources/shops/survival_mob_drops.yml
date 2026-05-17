@@ -1,0 +1,275 @@
+id: survival_mob_drops
+display-name: "&cMob Drops"
+enabled: true
+display-slot: 15
+display-item:
+  material: BONE
+  name: "&c☠ &fMob Drops"
+  lore:
+    - "&8Loot from monsters and animals"
+
+categories:
+  common_drops:
+    display-name: "&7Common Drops"
+    enabled: true
+    icon:
+      material: BONE
+      name: "&7Common Drops"
+    items:
+      bone:
+        material: BONE
+        buy-price: 5
+        sell-price: 2
+        slot: 0
+      string:
+        material: STRING
+        buy-price: 5
+        sell-price: 2
+        slot: 1
+      gunpowder:
+        material: GUNPOWDER
+        buy-price: 15
+        sell-price: 6
+        slot: 2
+      spider_eye:
+        material: SPIDER_EYE
+        buy-price: 10
+        sell-price: 4
+        slot: 3
+      rotten_flesh:
+        material: ROTTEN_FLESH
+        buy-price: 2
+        sell-price: 1
+        slot: 4
+      arrow:
+        material: ARROW
+        buy-price: 2
+        sell-price: 1
+        slot: 5
+      feather:
+        material: FEATHER
+        buy-price: 4
+        sell-price: 2
+        slot: 6
+      leather:
+        material: LEATHER
+        buy-price: 8
+        sell-price: 4
+        slot: 7
+      rabbit_hide:
+        material: RABBIT_HIDE
+        buy-price: 5
+        sell-price: 2
+        slot: 8
+      rabbit_foot:
+        material: RABBIT_FOOT
+        buy-price: 50
+        sell-price: 20
+        slot: 9
+      wool:
+        material: WHITE_WOOL
+        buy-price: 10
+        sell-price: 4
+        slot: 10
+      ink_sac:
+        material: INK_SAC
+        buy-price: 10
+        sell-price: 4
+        slot: 11
+      glow_ink_sac:
+        material: GLOW_INK_SAC
+        buy-price: 15
+        sell-price: 6
+        slot: 12
+      slimeball:
+        material: SLIME_BALL
+        buy-price: 15
+        sell-price: 6
+        slot: 13
+      phantom_membrane:
+        material: PHANTOM_MEMBRANE
+        buy-price: 60
+        sell-price: 25
+        slot: 14
+      prismarine_shard:
+        material: PRISMARINE_SHARD
+        buy-price: 20
+        sell-price: 8
+        slot: 15
+      prismarine_crystals:
+        material: PRISMARINE_CRYSTALS
+        buy-price: 25
+        sell-price: 10
+        slot: 16
+
+  nether_drops:
+    display-name: "&cNether Drops"
+    enabled: true
+    icon:
+      material: BLAZE_ROD
+      name: "&cNether Drops"
+    items:
+      blaze_rod:
+        material: BLAZE_ROD
+        buy-price: 60
+        sell-price: 25
+        slot: 0
+      blaze_powder:
+        material: BLAZE_POWDER
+        buy-price: 30
+        sell-price: 12
+        slot: 1
+      ghast_tear:
+        material: GHAST_TEAR
+        buy-price: 80
+        sell-price: 35
+        slot: 2
+      magma_cream:
+        material: MAGMA_CREAM
+        buy-price: 40
+        sell-price: 16
+        slot: 3
+      nether_star:
+        material: NETHER_STAR
+        buy-price: 5000
+        sell-price: 2000
+        slot: 4
+      wither_skeleton_skull:
+        material: WITHER_SKELETON_SKULL
+        buy-price: 2000
+        sell-price: 800
+        slot: 5
+      piglin_head:
+        material: PIGLIN_HEAD
+        buy-price: 500
+        sell-price: 200
+        slot: 6
+      gold_nugget:
+        material: GOLD_NUGGET
+        buy-price: 10
+        sell-price: 4
+        slot: 7
+
+  end_drops:
+    display-name: "&5End Drops"
+    enabled: true
+    icon:
+      material: ENDER_PEARL
+      name: "&5End Drops"
+    items:
+      ender_pearl:
+        material: ENDER_PEARL
+        buy-price: 40
+        sell-price: 18
+        slot: 0
+      eye_of_ender:
+        material: ENDER_EYE
+        buy-price: 80
+        sell-price: 35
+        slot: 1
+      shulker_shell:
+        material: SHULKER_SHELL
+        buy-price: 200
+        sell-price: 80
+        slot: 2
+      chorus_fruit:
+        material: CHORUS_FRUIT
+        buy-price: 20
+        sell-price: 8
+        slot: 3
+      dragon_breath:
+        material: DRAGON_BREATH
+        buy-price: 200
+        sell-price: 80
+        slot: 4
+      elytra:
+        material: ELYTRA
+        buy-price: 10000
+        sell-price: 4000
+        slot: 5
+      end_crystal:
+        material: END_CRYSTAL
+        buy-price: 800
+        sell-price: 300
+        slot: 6
+
+  rare_drops:
+    display-name: "&6Rare & Special Drops"
+    enabled: true
+    icon:
+      material: TOTEM_OF_UNDYING
+      name: "&6Rare & Special Drops"
+    items:
+      totem_of_undying:
+        material: TOTEM_OF_UNDYING
+        buy-price: 3000
+        sell-price: 1200
+        slot: 0
+      trident:
+        material: TRIDENT
+        buy-price: 500
+        sell-price: 200
+        slot: 1
+      nautilus_shell:
+        material: NAUTILUS_SHELL
+        buy-price: 100
+        sell-price: 40
+        slot: 2
+      heart_of_the_sea:
+        material: HEART_OF_THE_SEA
+        buy-price: 1500
+        sell-price: 600
+        slot: 3
+      music_disc_cat:
+        material: MUSIC_DISC_CAT
+        buy-price: 500
+        sell-price: 200
+        slot: 4
+      music_disc_13:
+        material: MUSIC_DISC_13
+        buy-price: 500
+        sell-price: 200
+        slot: 5
+      disc_fragment_5:
+        material: DISC_FRAGMENT_5
+        buy-price: 80
+        sell-price: 35
+        slot: 6
+      sniffer_egg:
+        material: SNIFFER_EGG
+        buy-price: 2000
+        sell-price: 800
+        slot: 7
+
+  skulls:
+    display-name: "&7Mob Skulls"
+    enabled: true
+    icon:
+      material: SKELETON_SKULL
+      name: "&7Mob Skulls"
+    items:
+      skeleton_skull:
+        material: SKELETON_SKULL
+        buy-price: 100
+        sell-price: 40
+        slot: 0
+      zombie_head:
+        material: ZOMBIE_HEAD
+        buy-price: 100
+        sell-price: 40
+        slot: 1
+      creeper_head:
+        material: CREEPER_HEAD
+        buy-price: 200
+        sell-price: 80
+        slot: 2
+      wither_skeleton_skull:
+        material: WITHER_SKELETON_SKULL
+        buy-price: 2000
+        sell-price: 800
+        slot: 3
+      dragon_head:
+        material: DRAGON_HEAD
+        buy-price: 5000
+        sell-price: 2000
+        slot: 4

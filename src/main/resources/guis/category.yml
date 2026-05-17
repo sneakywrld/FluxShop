@@ -1,0 +1,121 @@
+# ── Category (Section) GUI ────────────────────────────────────────────────────
+# Displayed when a player clicks a shop category icon in the main menu.
+# Shows all items in that category, paginated.
+
+# {category} = category display name
+title: "<gold><bold>{category}</bold></gold>"
+
+rows: 6
+
+border:
+  enabled: true
+  material: BLACK_STAINED_GLASS_PANE
+  name: " "
+
+background:
+  material: GRAY_STAINED_GLASS_PANE
+  name: " "
+
+# Item display area: slots where shop items are placed
+# Row 0–3 inner area (avoiding border): slots 10–16, 19–25, 28–34, 37–43
+item-slots:
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+  - 37
+  - 38
+  - 39
+  - 40
+  - 41
+  - 42
+  - 43
+
+# Navigation items (fixed bottom row)
+navigation:
+  previous-page:
+    slot: 45
+    material: ARROW
+    name: "<aqua><bold>◀ Previous Page"
+    lore:
+      - "<gray>Page {page} of {total}"
+    action: PREV_PAGE
+    # Hide this button if on the first page
+    hide-on-first-page: true
+
+  page-indicator:
+    slot: 49
+    material: PAPER
+    name: "<white>Page <yellow>{page}<white>/<yellow>{total}"
+    lore:
+      - "<gray>{items} items in this category"
+    action: NONE
+
+  next-page:
+    slot: 53
+    material: ARROW
+    name: "<aqua><bold>Next Page ▶"
+    lore:
+      - "<gray>Page {page} of {total}"
+    action: NEXT_PAGE
+    hide-on-last-page: true
+
+  back:
+    slot: 47
+    material: PLAYER_HEAD
+    skull-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODY0Zjc3OWE5ZTNmODg2NGEyMWFmYWI4NjMwMzY1MGMyMGI2ODRjYmQ1NDI3NjY0YzRlYTE0Njg2NDMifX19"
+    name: "<gray>◁ Back"
+    lore:
+      - "<gray>Return to the main menu."
+    action: BACK
+
+  search:
+    slot: 51
+    material: COMPASS
+    name: "<yellow>⚲ Search"
+    lore:
+      - "<gray>Type in chat to filter items."
+    action: SEARCH
+
+# How item lore is built for each shop item displayed here.
+# Available tags: {buy-price}, {sell-price}, {currency}, {stock}, {player-stock},
+#   {permission}, {discount}, {multiplier}, {description}
+item-lore-format:
+  - ""
+  - "{buy-price}"
+  - "{sell-price}"
+  - "{stock}"
+  - "{player-stock}"
+  - "{discount}"
+  - "{multiplier}"
+  - ""
+  - "{click-hint}"
+
+# Click actions per mouse button
+click-actions:
+  left:        BUY_SCREEN      # Open buy quantity screen
+  right:       SELL_SCREEN     # Open sell quantity screen
+  shift-left:  BUY_MAX         # Buy maximum affordable quantity
+  shift-right: SELL_ALL_TYPE   # Sell all of this item type in inventory
+
+# Enchant glow on items the player has permission to buy/sell
+permission-glow: true
+# Show a red tint (via custom lore/name suffix) on items the player lacks permission for
+show-no-permission-items: true
