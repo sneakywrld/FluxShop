@@ -77,7 +77,7 @@ public class SellGui extends FluxGui {
 
         FileConfiguration cfg  = plugin.getConfigManager().getGuiConfig("sell_screen");
         String itemDisplayName = item.getCustomName() != null ? item.getCustomName() : "Item";
-        String titleTemplate   = cfg.getString("title", "<gold><bold>Sell {item}");
+        String titleTemplate   = cfg.getString("title", "&6&lSell {item}");
         String title = plugin.getMessageManager().format(
             titleTemplate.replace("{item}", itemDisplayName), player);
 

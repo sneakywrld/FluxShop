@@ -81,7 +81,7 @@ public class BuyGui extends FluxGui {
 
         FileConfiguration cfg  = plugin.getConfigManager().getGuiConfig("buy_screen");
         String itemDisplayName = item.getCustomName() != null ? item.getCustomName() : "Item";
-        String titleTemplate   = cfg.getString("title", "<green><bold>Buy {item}");
+        String titleTemplate   = cfg.getString("title", "&a&lBuy {item}");
         String title = plugin.getMessageManager().format(
             titleTemplate.replace("{item}", itemDisplayName), player);
 
